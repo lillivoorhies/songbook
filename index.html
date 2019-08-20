@@ -54,7 +54,7 @@
                 </div>
                 <div class="col-8">
                     <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="showIndex" onClick="toggleIndex()" checked>
+                        <input type="checkbox" class="custom-control-input" id="showIndex" onClick="toggleIndex()">
                         <label class="custom-control-label" for="showIndex">Show index</label>
                     </div>
                     <div class="custom-control custom-switch">
@@ -74,7 +74,7 @@
     <script src="DynamicTableClass-2.3.js"></script>
     <script>
 
-        let showIndex = true;
+        let showIndex = false;
         let showPageNumbers = false;
         
         songs = songs.filter((a) => a.lyrics.trim() != "");
