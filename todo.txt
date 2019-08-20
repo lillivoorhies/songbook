@@ -2,5 +2,4 @@
     click arrows for next and previous on the bottoms of the pages for next pages
     fit on a page, etc.
  . option to choose between nashville numbers and chords
- . remove ots dependencies
- 
+ . accept filter from querystring q=

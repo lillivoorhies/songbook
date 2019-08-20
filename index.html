@@ -32,7 +32,7 @@
                 <div class="col-5">
                         <div class="d-flex position-relative" id="Filter">
                             <div class="searchbar position-absolute" style="top: auto; right: 0;">
-                                <input class="search_input" type="text" name="" placeholder="Search by artist name or song title..." oninput="filterSongs(this.value)">
+                                <input class="search_input" id="" type="text" placeholder="Search by artist name or song title..." oninput="filterSongs(this.value)" >
                                 <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
                             </div>
                         </div>
@@ -101,6 +101,23 @@
                 {key: 'writtenBy', logic: songsTable.filterLogicEnum.WordStartsWith}
             ]);
             generateIndex();
+        }
+
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        };
+
+        function togglePageNumbers() {
+            showPageNumbers = !showPageNumbers;
+            update();
+        }
+
+        function toggleIndex() {
+            showIndex = !showIndex;
+            update();
         }
 
         function generateIndex () {
@@ -274,15 +291,26 @@
             return html;
         });
 
-        function togglePageNumbers() {
-            showPageNumbers = !showPageNumbers;
-            update();
+        var urlParams = new URLSearchParams(window.location.search);
+
+        if (urlParams.has("q")) {
+            let query = urlParams.get("q");
+            document.querySelector(".search_input").value = query;
+            filterSongs(query);
         }
 
-        function toggleIndex() {
-            showIndex = !showIndex;
-            update();
-        }
+        // if (urlParams.has("q")) {
+        //     let query = urlParams.get("q");
+        //     document.querySelector(".search_input").value = query;
+        //     filterSongs(query);
+        // }
+
+        // if (urlParams.has("q")) {
+        //     let query = urlParams.get("q");
+        //     document.querySelector(".search_input").value = query;
+        //     filterSongs(query);
+        // }
+
 
         function update() {
             songIndex = 1;
