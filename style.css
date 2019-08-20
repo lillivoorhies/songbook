@@ -1,0 +1,161 @@
+body {
+    background-color: #eee; 
+}
+
+a { color: inherit; }
+a:hover { text-decoration: none; }
+
+
+#Book {
+    width: 12.5in;
+    height: 100% !important;
+    margin: 1in auto;
+}
+
+.page {
+}
+
+/* Searchbar: https://bootsnipp.com/snippets/GaeQR */
+
+#Filter .searchbar{
+    margin-bottom: auto;
+    margin-top: auto;
+    height: 60px !important;
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 10px 20px !important;
+    }
+
+#Filter .search_input{
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 0;
+    caret-color: transparent;
+    line-height: 40px;
+    transition: width 0.4s linear;
+    }
+
+#Filter .searchbar:hover > .search_input{
+    width: 350px;
+    caret-color: red;
+    transition: width 0.4s linear;
+    }
+
+#Index .line {
+}
+
+#Index {
+
+}
+
+#Index .page-numbers {
+    border-bottom: 1px dotted #ccc;
+}
+
+#Index .title p {
+    margin: 0;
+    padding-left: 1rem;
+
+}
+
+
+#Index .title p:first-of-type {
+    text-indent: -1rem;
+
+}
+
+.song, .page  {
+    background-color: #fff;
+    margin: 1in 0;
+    padding: 1in;
+
+}
+
+.page .number {
+    position: absolute;
+    top: 1in;
+    right: 1in;
+}
+
+.page .header {
+    margin-bottom: 2em;
+}
+
+.song .title, #Intro .title {
+    position: relative;
+    z-index: 1 !important;
+    font-family: 'Merriweather';
+    font-size: 48pt;
+    margin-bottom: 0;
+
+}
+
+.song .key {
+    border: 1px solid black;
+    padding: 4px 10px;
+    font-size: 16pt;
+    vertical-align: super;
+    position: relative;
+    top: 5px;
+}
+
+.song .subtitle {
+    text-transform: uppercase;
+    margin-top: -16pt;
+    padding-left: 1em;
+    font-family: 'Oswald';
+    font-size: 16pt;
+
+}
+
+.notes {
+    font-family: "Gentium Book Basic", Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.2em;
+}
+
+.song .lyrics {
+    margin-block-start: 1em;
+    font-family: "Caveat";
+    font-size: 26pt;
+    line-height: 26pt;
+
+}
+
+.song .chord-section {
+    margin-top: 1em;
+}
+
+.song .chord-bar {
+    font-family: "Source Code Pro";
+    border-left: 1px solid black;
+}
+
+.song .chord-bar:last-of-type {
+    border-right: 1px solid black;
+}
+
+@media print {
+    #Book {
+        margin: 1in 0.5in
+    }
+
+    #Intro {
+        display: none;
+    }    
+
+    .page {
+        margin: 0;
+        padding: 0;
+        margin-top: 0.5in;
+        height: 100% !important;
+        page-break-after: always;
+    }
+
+    .page .number {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    
+}

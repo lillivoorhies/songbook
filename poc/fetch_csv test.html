@@ -1,0 +1,55 @@
+<!doctype html>
+
+    <html lang="en">
+    <head>
+    <meta charset="utf-8">
+
+    <title>The HTML5 Herald</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="SitePoint">
+
+    <!-- <link rel="stylesheet" href="css/styles.css?v=1.0"> -->
+
+    </head>
+
+    <body>
+        <script>
+
+            const SPREADSHEET_ID = '0Ak1Z4lR0gDU3cHpjTFdLYlc1RWV1YmRZSERTUERuT2c';
+            const SPREADSHEET_NAME = 'Main';
+            const API_KEY = 'AIzaSyDwsh7Lau8OpkFQoUbX3cTPMcFeCcncV1g';
+            let quotes;
+
+            function getObjectFromSheetData(data) {
+                let rows = data.values;
+                let obj = [];
+                let keys = [];
+
+                rows[0].forEach(key => keys.push(key));
+
+                for (let i = 1; i < rows.length; i++) {
+                    let row = [];
+                    for (let j = 0; j < keys.length; j++) {
+                        row[keys[j]] = rows[i][j];
+                    }
+                    obj.push(row);
+                }
+                return obj;
+            }
+
+
+            fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values/${SPREADSHEET_NAME}?key=${API_KEY}`)
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(data) {
+                //console.log(JSON.stringify(myJson));
+                quotes = getObjectFromSheetData(data);
+
+            });
+
+            
+        
+        </script>
+    </body>
+</html>

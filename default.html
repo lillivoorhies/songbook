@@ -1,0 +1,263 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>JS Songbook</title>
+    <meta name="description" content="JS Songbook">
+    <meta name="author" content="Stephen Hebert">
+
+    <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans|Gentium+Book+Basic:400,700' rel='stylesheet'>
+
+</head>
+
+<body class="h-100">
+
+    <div id="Book">
+		<div class="container-fluid" id="Intro">
+            <div class="row">
+                <div class="col-7">
+                    <h3 class="title">Steve's Songbook</h3>
+                </div>
+                <div class="col-5">
+                        <div class="d-flex position-relative" id="Filter">
+                            <div class="searchbar position-absolute" style="top: auto; right: 0;">
+                                <input class="search_input" type="text" name="" placeholder="Search by artist name or song title..." oninput="filterSongs(this.value)">
+                                <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="row">
+                <div class="col-12 notes">
+                    <p>I've been playing music for a long time. However it never fails when I'm with guitar in hand &mdash; surrounded by friends and anticipation &mdash; 
+                        that I can't remember a single song I like to play, much less the lyrics to any of them. Embarassingly recently, I had the idea to get the lyrics
+                        together, write a script, and grab my OfficeDepot discount card.  If you'd like to print it, I recommend using Chrome, Print, and Save As PDF.
+                        The result is a one-song-per-page book with an index within a lightweight, clickable document.  It uses a JSON for data.  I'll add this project to
+                        GitHub with instructions for you to use this script to generate a book of your favorite songs.
+                    </p>
+                </div>
+            </div>
+            <!-- Options: toggle index, tags, etc -->
+		</div>
+        <div id="Index"></div>
+        <div id="SongsTable"></div>
+    </div>
+
+    <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+    <script src="songs.json"></script>
+    <script src="DynamicTableClass-2.3.js"></script>
+    <script>
+
+        const showIndex = true;
+        const showPageNumbers = false;
+        
+        songs = songs.filter((a) => a.lyrics.trim() != "");
+
+        songs.sort(function(a,b) {
+            let aTitle = a.title.toUpperCase();
+            let bTitle = b.title.toUpperCase();
+            
+            if (aTitle > bTitle) {
+                return 1;
+            }
+            else if (aTitle < bTitle) {
+                return -1;
+            }
+            else {
+                return 0;
+            }
+        });
+
+        function filterSongs (query) {
+            songsTable.filter('songsFilter', query, [
+                {key: 'title', logic: songsTable.filterLogicEnum.WordStartsWith},
+                {key: 'writtenBy', logic: songsTable.filterLogicEnum.WordStartsWith}
+            ]);
+            generateIndex();
+        }
+
+        function generateIndex () {
+            const indexContainer = document.getElementById("Index");
+            const pageHeader = `
+                <div class="container-fluid page">
+                    <div class="row">`;
+            const colHeader = `
+                <div class="col-4">
+                    <div class="container-fluid">`;
+            const colFooter = `
+                    </div>
+                </div>`;
+            const pageFooter = `
+                    </div>
+                </div>`;
+
+            let html = pageHeader + colHeader;
+            const linesPerColumn = 65;
+            const columnsPerPage = 2;
+            let i = 1;
+            let lineOnPage = 1;
+            let column = 1;
+            let prevLetter = '1';
+            
+            let filteredSongs = songsTable.filteredTable; 
+            filteredSongs.forEach(function (song) { 
+                // if(i != 1 && i % columnsPerPage == 0) {
+                //     html += colFooter + colHeader;
+                // }
+                // if cols > 3, new page
+
+                if(lineOnPage != 1 && lineOnPage >= linesPerColumn) {
+                    html += colFooter + colHeader;
+                    lineOnPage = 1;
+                }
+                let currLetter = song.title.charAt(0);
+                if (currLetter != prevLetter) {
+                    if (lineOnPage > 1) { html += "<br />"; lineOnPage++; };
+                    prevLetter = currLetter;
+                }
+                html += `
+                    <div class="row line ${(showPageNumbers ? "page-numbers" : "page-numbers")}">` + 
+                        ((showPageNumbers) ? 
+                            `<div class="col-10 title"><p class="text-truncate"><a href="#Page${song.pageIndex}">${song.title}</a></p></div> 
+                            <div class="col-2 text-right"><a href="#Page${song.pageIndex}">${song.pageIndex}</a></div>` :
+                            `<div class="col-12 title"><p class="text-truncate"><a href="#Page${song.pageIndex}">${song.title}</a></p></div>`
+                        ) +
+                    `</div>`;
+                i++;
+                lineOnPage++;
+            });
+            html += colFooter + pageFooter;
+            indexContainer.innerHTML = html;
+        }
+
+        let songIndex = 1;
+        var songsTable = new DynamicTable('Songs', songs, (song) => {
+            song.pageIndex = songIndex;
+
+            const writtenBy = (song.writtenBy && song.writtenYear) ? 
+                    `Written by ${song.writtenBy} (${song.writtenYear})` : 
+                (song.writtenBy) ? 
+                    `Written by ${song.writtenBy}` : 
+                (song.writtenYear) ? 
+                    `Written in ${song.writtenYear}` :
+                    "";
+
+            const recordedBy = (song.recordedBy && song.recordedYear) ? 
+                    `Recorded by ${song.recordedBy} (${song.recordedYear})` : 
+                (song.recordedBy) ? 
+                    `Recorded by ${song.recordedBy}` : 
+                (song.recordedYear) ? 
+                    `Recorded in ${song.recordedYear}` :
+                    "";
+
+            const subtitle = `${writtenBy}` + 
+                ((writtenBy && recordedBy) ? ` and ` : "")
+                + `${recordedBy}`;
+            
+            const lyricLines = song.lyrics.split("\n");
+            const linesPerColumn = 40;
+            let i = linesPerColumn + 1;
+            while (i < lyricLines.length - 1) {
+                let wrapAt = i;
+                // find last blank line
+                while (lyricLines[i].trim() != "" && i>0) {i--;}
+                // if no blank lines found, go back to wrap line
+                if (i == 0) { i = wrapAt; }
+                lyricLines.splice(i, 0, '</p></div><div class="col"><p>');
+                // remove any immediately following blank lines
+                while (lyricLines[i+1].trim() == "") {
+                    wrapAt++;
+                    lyricLines.splice(i+1,1);
+                }
+                i = wrapAt + linesPerColumn + 1;
+            }
+
+            let lyrics = lyricLines
+                .join("\n")
+                .replace(/^/,'<p>')
+                .replace(/$/,'</p>')
+                .replace(/\n\n/g,'</p><p>')
+                .replace(/(?<!<p>)\n/g, '<br />')
+                .replace(/\t/g,' ')
+                .replace(/^\s+|\s+$|\s+(?=\s)/g, "");
+
+            let chords = '';
+            if(song.chordSections)
+                song.chordSections.forEach(function (section) {
+                    let chordProgression = '';
+                    section.chordBars.forEach(function (bar) {
+                        chordProgression += `
+                            <div class="col-3 chord-bar text-center">
+                                ${bar.replace(/ /g, ' &nbsp;')}
+                            </div>`;
+                    });
+                    chords += `
+                        <div class="row chord-section">
+                            <div class="col-4 chord-section-title">${section.name.toUpperCase()}</div>
+                            <div class="col-8 chord-section-progression">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        ${chordProgression}
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>`;
+                });
+
+            const html = 
+                `<div id="Page${song.pageIndex}" class="page song position-relative">` +
+                    ((showPageNumbers) ?
+                        `<div class="number">${song.pageIndex}</div>` :
+                        '' 
+                    ) +
+                    `<div class="container-fluid header">
+                        <div class="row">
+                            <div class="col">
+                                <h3 class="title">${song.title}` +
+                                    ((song.key) ? 
+                                        ` <strong class="key">${song.key}</strong>` : 
+                                        ''
+                                    ) +
+                                `</h3>
+                            </div>
+                        </div>
+                        <div class="row subtitle">
+                            <div class="col">
+                                <span class="subtitle text-secondary">${subtitle}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid body">` +
+                        ((song.notes) ?
+                            `<div class="row notes">
+                                <div class="col">${song.notes}</div>
+                            </div>` :
+                            '') +                        
+                        `<div class="row lyrics">
+                            <div class="col">${lyrics}</div>
+                        </div>
+                        ${chords}
+                    </div>
+                </div>`;
+            songIndex++;
+
+            return html;
+        });
+
+        generateIndex();
+        
+    </script>
+</body>
+
+</html>
