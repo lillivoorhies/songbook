@@ -48,6 +48,21 @@
                     </p>
                 </div>
             </div>
+            <div class="row options">
+                <div class="col-4">
+                    <h3>Options</h3>
+                </div>
+                <div class="col-8">
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="showIndex" onClick="toggleIndex()" checked>
+                        <label class="custom-control-label" for="showIndex">Show index</label>
+                    </div>
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="showPageNumbers" onClick="togglePageNumbers()">
+                        <label class="custom-control-label" for="showPageNumbers">Show page numbers</label>
+                    </div>
+                </div>
+            </div>
             <!-- Options: toggle index, tags, etc -->
 		</div>
         <div id="Index"></div>
@@ -59,8 +74,8 @@
     <script src="DynamicTableClass-2.3.js"></script>
     <script>
 
-        const showIndex = true;
-        const showPageNumbers = false;
+        let showIndex = true;
+        let showPageNumbers = false;
         
         songs = songs.filter((a) => a.lyrics.trim() != "");
 
@@ -80,6 +95,7 @@
         });
 
         function filterSongs (query) {
+            songIndex = 1;
             songsTable.filter('songsFilter', query, [
                 {key: 'title', logic: songsTable.filterLogicEnum.WordStartsWith},
                 {key: 'writtenBy', logic: songsTable.filterLogicEnum.WordStartsWith}
@@ -89,6 +105,9 @@
 
         function generateIndex () {
             const indexContainer = document.getElementById("Index");
+            indexContainer.innerHTML = '';
+            if (!showIndex) return;
+
             const pageHeader = `
                 <div class="container-fluid page">
                     <div class="row">`;
@@ -255,7 +274,22 @@
             return html;
         });
 
-        generateIndex();
+        function togglePageNumbers() {
+            showPageNumbers = !showPageNumbers;
+            update();
+        }
+
+        function toggleIndex() {
+            showIndex = !showIndex;
+            update();
+        }
+
+        function update() {
+            songIndex = 1;
+            songsTable.update();
+            generateIndex();
+        } update();
+
         
     </script>
 </body>
