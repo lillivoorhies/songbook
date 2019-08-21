@@ -2,16 +2,12 @@ html, body {
     /* margin: auto 0.5in; */
     margin: 0;
     padding: 0;
-    height: 100px;
+    height: 100%;
     background-color: #eee; 
 }
 
 a { color: inherit; }
 a:hover { text-decoration: none; }
-
-
-#Book {
-}
 
 /* Searchbar: https://bootsnipp.com/snippets/GaeQR */
 
@@ -36,16 +32,10 @@ a:hover { text-decoration: none; }
 
 #Filter .searchbar:hover > .search_input{
     width: 350px;
-    caret-color: red;
+    caret-color: #069;
     transition: width 0.4s linear;
     }
 
-#Index .line {
-}
-
-#Index {
-
-}
 
 #Index .page-numbers {
     border-bottom: 1px dotted #ccc;
@@ -54,24 +44,19 @@ a:hover { text-decoration: none; }
 #Index .title p {
     margin: 0;
     padding-left: 1rem;
-
 }
-
 
 #Index .title p:first-of-type {
     text-indent: -1rem;
-
 }
 
 .song, .page  {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background-color: #fff;
-    overflow: hidden;
-    /* margin: 0.5in 0;
-    padding: 0.5in; */
     padding: 0.25in;
     border: 1px solid black;
+    overflow: hidden;
 }
 
 .page .number {
@@ -85,17 +70,13 @@ a:hover { text-decoration: none; }
 }
 
 .page .columnar {
-    columns: 3;
-    /* column-rule: 4px solid #eee; */
-    /* grid-auto-flow: column; */
+    columns: auto;
 }
 
 .song .title, #Intro .title {
-    /* position: absolute; */
     top: 0;
     color: #fff;
     background-color: #999;
-    /* z-index: 1 !important; */
     font-family: 'Merriweather';
     font-size: 48pt;
     line-height: 36pt;
@@ -113,9 +94,7 @@ a:hover { text-decoration: none; }
     right: -10px;
     font-weight: bolder;
     padding: 5px 16px;
-    /* z-index: 3 !important; */
     font-size: 16pt;
-    /* vertical-align: bottom; */
     text-align: center;
     color: #fff;
     border: 1px solid #ccc;
@@ -125,21 +104,18 @@ a:hover { text-decoration: none; }
 .song .subtitle {
     color: #333;
     text-transform: uppercase;
-    /* font-style: italic;  */
-    /* margin-top: -8pt; */
-    /* padding-left: 1em; */
     font-family: 'Oswald';
-    font-size: 16pt;
+    font-size: 12pt;
 
 }
 
 .notes {
     font-family: "Gentium Book Basic", Georgia, 'Times New Roman', Times, serif;
     font-size: 1.2em;
+    margin-bottom: 1rem;
 }
 
 .song .lyrics {
-    /* margin-block-start: 1em; */
     font-family: "Caveat";
     color: #333;
     font-size: 18pt;
@@ -162,7 +138,7 @@ a:hover { text-decoration: none; }
 }
 
 .song .chord-section {
-    margin-top: 1em;
+    margin-top: 1rem;
 }
 
 .song .chord-bar {
