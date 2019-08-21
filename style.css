@@ -36,7 +36,6 @@ a:hover { text-decoration: none; }
     transition: width 0.4s linear;
     }
 
-
 #Index .page-numbers {
     border-bottom: 1px dotted #ccc;
 }
@@ -74,7 +73,6 @@ a:hover { text-decoration: none; }
 }
 
 .song .title, #Intro .title {
-    top: 0;
     color: #fff;
     background-color: #999;
     font-family: 'Merriweather';
