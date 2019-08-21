@@ -65,11 +65,19 @@ a:hover { text-decoration: none; }
 }
 
 .page .header {
-    margin-bottom: 2em;
+    margin-bottom: 0.5rem;
 }
 
-.page .columnar {
-    columns: auto;
+.page .columns-2 {
+    columns: 2;
+}
+
+.page .columns-3 {
+    columns: 3;
+}
+
+.page .columns-4 {
+    columns: 4;
 }
 
 .song .title, #Intro .title {
@@ -80,20 +88,23 @@ a:hover { text-decoration: none; }
     line-height: 36pt;
     padding: 10px;
     margin-bottom: 0;
+    letter-spacing: -6pt;
+    /* -webkit-text-stroke: 1px black; */
 
 }
 
 .song .key {
     position: absolute;
-    height: 60px;
-    width: 60px;
-    border-radius: 30px;
-    top: -15px;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    top: -10px;
     right: -10px;
     font-weight: bolder;
-    padding: 5px 16px;
+    padding: 2px;
     font-size: 16pt;
     text-align: center;
+    vertical-align: ;
     color: #fff;
     border: 1px solid #ccc;
     background-color: #666;
@@ -104,7 +115,6 @@ a:hover { text-decoration: none; }
     text-transform: uppercase;
     font-family: 'Oswald';
     font-size: 12pt;
-
 }
 
 .notes {
@@ -127,6 +137,7 @@ a:hover { text-decoration: none; }
 
 .song .lyrics .stanza {
     margin-bottom: 1rem;
+    -webkit-column-break-inside: avoid;
 }
 
 .song .lyrics p {

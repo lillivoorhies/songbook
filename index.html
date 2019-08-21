@@ -197,7 +197,7 @@
                 + `${recordedBy}`;
             
             const lyricLines = song.lyrics.split("\n");
-            const linesPerColumn = 40;
+            const linesPerColumn = 20;
             let i = linesPerColumn + 1;
             //while (i < lyricLines.length - 1) {
                 //let wrapAt = i;
@@ -249,6 +249,9 @@
                         </div>`;
                 });
 
+            let columns = Math.ceil(lyricLines.length/linesPerColumn);
+            console.log(`Song: ${song.title}, Lyrics lines: ${lyricLines.length}, Columns: ${columns}`);
+
             const html = 
                 `<div id="Page${song.pageIndex}" class="container-fluid page song h-100 w-100">` +
                     ((showPageNumbers) ?
@@ -256,16 +259,17 @@
                         '' 
                     ) +
                     `<div class="row">
-                        <div class="col columnar">
+                        <div class="col columns-${columns}">
                             <div class="container-fluid header">
                                 <div class="row">
                                     <div class="col">
-                                        <h3 class="title position-relative">${song.title}` +
+                                        <div class="position-relative">
+                                            <h3 class="title">${song.title}</h3>                                        ` +
                                             ((song.key) ? 
                                                 ` <div class="key">${song.key.replace(/#/,'<sup>&#x266f;</sup>').replace(/b/g,'<sup>&#x266d;</sup>')}</div>` : 
                                                 ''
                                             ) +
-                                        `</h3>
+                                        `</div>
                                     </div>
                                 </div>
                                 <div class="row subtitle pr-2 pl-2">

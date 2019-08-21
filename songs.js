@@ -3144,33 +3144,46 @@ let songs =
 		writtenBy: "Will Jennings / Steve Winwood",
 		year: null,
 		lyrics: `
-			It used to seem to me that my life ran on too fast
-			And I had to take it slowly just to make the good parts last
-			But when you're born to run it's so hard to just slow down
-			So don't be surprised to see me back in that bright part of town
+			It used to seem to me 
+			that my life ran on too fast
+			And I had to take it slowly 
+			just to make the good parts last
+			But when you're born to run 
+			it's so hard to just slow down
+			So don't be surprised to see me 
+			back in that bright part of town
 			
 			I'll be back in the high life again
-			All the doors I closed one time will open up again
+			All the doors I closed one time
+			will open up again
 			I'll be back in the high life again
-			All the eyes that watched me once will smile and take me in
+			All the eyes that watched me once 
+			will smile and take me in
 			
 			And I'll drink and dance with one hand free
-			Let the world back into me and on I'll be a sight to see
+			Let the world back into me
+			and on I'll be a sight to see
 			Back in the high life again
 			
-			You used to be the best to make life be life to me
-			And I hope that you're still out there and you're like you used to be
+			You used to be the best 
+			to make life be life to me
+			And I hope that you're still out there 
+			and you're like you used to be
 			We'll have ourselves a time
 			And we'll dance 'til the morning sun
 			And we'll let the good times come in
 			And we won't stop 'til we're done
 			
 			We'll be back in the high life again
-			All the doors I closed one time will open up again
+			All the doors I closed one time 
+			will open up again
 			We'll be back in the high life again
-			All the eyes that watched us once will smile and take us in
+			All the eyes that watched us once 
+			will smile and take us in
+			
 			And we'll drink and dance with one hand free
-			And have the world so easily and oh we'll be a sight to see
+			And have the world so easily 
+			and oh we'll be a sight to see
 			Back in the high life again
 			
 			High life
@@ -3178,11 +3191,14 @@ let songs =
 			High life
 			Back in the high life again
 			We'll be back in the high life again
-			All the doors I closed one time will open up again
+			All the doors I closed one time 
+			will open up again
 			We'll be back in the high life again
-			All the eyes that watched us once will smile and take us in
+			All the eyes that watched us once 
+			will smile and take us in
 			And we'll drink and dance with one hand free
-			And have the world so easily and oh we'll be a sight to see
+			And have the world so easily 
+			and oh we'll be a sight to see
 			Back in the high life again
 			
 			High life
@@ -3672,24 +3688,28 @@ let songs =
 		lyrics: `
 			And we'll walk down the avenue again
 			And we'll sing all the songs from way back when
-			And we'll walk down the avenue again and the healing has begun
+			And we'll walk down the avenue again 
+			and the healing has begun
 
 			And we'll walk down the avenue in style
 			And we'll walk down the avenue and we'll smile
-			And we'll say "baby, ain't it all worthwhile?" when the healing has begun
+			And we'll say "baby, ain't it all worthwhile?" 
+			when the healing has begun
 
 			I want you to put on your pretty summer dress
 			You can wear your Easter bonnet and all the rest
-			And I want to make love to you yes, yes, yes, when the healing has begun
+			And I want to make love to you yes, yes, yes, 
+			when the healing has begun
 
 			When you hear the music ringin' in your soul
 			And you feel it in your heart and it grows and grows
-			And it came from the backstreet rock and roll and the healing has begun
-			(That's where we come from, man)
+			And it came from the backstreet rock and roll 
+			and the healing has begun
 			
 			I want you to put on your old summer red dress
 			Put on your Easter bonnet and all the rest
-			And I want to make love to you yes, yes and the healing has begun
+			And I want to make love to you yes, yes 
+			and the healing has begun
 
 			I can't stand myself
 			We're gonna make music underneath the stars
@@ -3717,7 +3737,8 @@ let songs =
 
 			We're gonna stay out all night long
 			And then we're gonna go out and roam across the field
-			Baby you know how I feel when the healing has begun
+			Baby you know how I feel 
+			when the healing has begun
 
 			When the healing, when the healing has begun
 			When the healing, when the healing has begun
