@@ -1,4 +1,8 @@
-body {
+html, body {
+    /* margin: auto 0.5in; */
+    margin: 0;
+    padding: 0;
+    height: 100px;
     background-color: #eee; 
 }
 
@@ -7,12 +11,6 @@ a:hover { text-decoration: none; }
 
 
 #Book {
-    width: 12.5in;
-    height: 100% !important;
-    margin: 1in auto;
-}
-
-.page {
 }
 
 /* Searchbar: https://bootsnipp.com/snippets/GaeQR */
@@ -66,10 +64,14 @@ a:hover { text-decoration: none; }
 }
 
 .song, .page  {
+    width: 100vw;
+    height: 100vh;
     background-color: #fff;
-    margin: 1in 0;
-    padding: 1in;
-
+    overflow: hidden;
+    /* margin: 0.5in 0;
+    padding: 0.5in; */
+    padding: 0.25in;
+    border: 1px solid black;
 }
 
 .page .number {
@@ -82,28 +84,50 @@ a:hover { text-decoration: none; }
     margin-bottom: 2em;
 }
 
+.page .columnar {
+    columns: 3;
+    /* column-rule: 4px solid #eee; */
+    /* grid-auto-flow: column; */
+}
+
 .song .title, #Intro .title {
-    position: relative;
-    z-index: 1 !important;
+    /* position: absolute; */
+    top: 0;
+    color: #fff;
+    background-color: #999;
+    /* z-index: 1 !important; */
     font-family: 'Merriweather';
     font-size: 48pt;
+    line-height: 36pt;
+    padding: 10px;
     margin-bottom: 0;
 
 }
 
 .song .key {
-    border: 1px solid black;
-    padding: 4px 10px;
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+    top: -15px;
+    right: -10px;
+    font-weight: bolder;
+    padding: 5px 16px;
+    /* z-index: 3 !important; */
     font-size: 16pt;
-    vertical-align: super;
-    position: relative;
-    top: 5px;
+    /* vertical-align: bottom; */
+    text-align: center;
+    color: #fff;
+    border: 1px solid #ccc;
+    background-color: #666;
 }
 
 .song .subtitle {
+    color: #333;
     text-transform: uppercase;
-    margin-top: -16pt;
-    padding-left: 1em;
+    /* font-style: italic;  */
+    /* margin-top: -8pt; */
+    /* padding-left: 1em; */
     font-family: 'Oswald';
     font-size: 16pt;
 
@@ -115,11 +139,26 @@ a:hover { text-decoration: none; }
 }
 
 .song .lyrics {
-    margin-block-start: 1em;
+    /* margin-block-start: 1em; */
     font-family: "Caveat";
-    font-size: 26pt;
-    line-height: 26pt;
+    color: #333;
+    font-size: 18pt;
+    line-height: 16pt;
 
+}
+
+.song .lyrics .break {
+    color: #ccc;
+}
+
+.song .lyrics .stanza {
+    margin-bottom: 1rem;
+}
+
+.song .lyrics p {
+    margin-bottom: 0;    
+    text-indent: -2rem;
+    padding-left: 2rem;
 }
 
 .song .chord-section {

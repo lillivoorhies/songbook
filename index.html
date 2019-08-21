@@ -21,10 +21,10 @@
 
 </head>
 
-<body class="h-100 w-100">
+<body>
 
-    <div id="Book w-100 h-100" style="padding: 0.5in;">
-		<div class="container-fluid" id="Intro">
+    <!-- <div id="Book w-100 h-100"  > -->
+		<div class="container-fluid d-none" id="Intro">
             <div class="row">
                 <div class="col-7">
                     <h3 class="title">Steve's Songbook</h3>
@@ -66,8 +66,8 @@
             <!-- Options: toggle index, tags, etc -->
 		</div>
         <div id="Index"></div>
-        <div id="SongsTable"></div>
-    </div>
+        <div id="SongsTable" class="h-100 w-100"></div>
+    <!-- </div> -->
 
     <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
     <script src="DynamicTableClass-2.3.js"></script>
@@ -199,28 +199,31 @@
             const lyricLines = song.lyrics.split("\n");
             const linesPerColumn = 40;
             let i = linesPerColumn + 1;
-            while (i < lyricLines.length - 1) {
-                let wrapAt = i;
+            //while (i < lyricLines.length - 1) {
+                //let wrapAt = i;
                 // find last blank line
-                while (lyricLines[i].trim() != "" && i>0) {i--;}
+                //while (lyricLines[i].trim() != "" && i>0) {i--;}
                 // if no blank lines found, go back to wrap line
-                if (i == 0) { i = wrapAt; }
-                lyricLines.splice(i, 0, '</p></div><div class="col"><p>');
+                //if (i == 0) { i = wrapAt; }
+                //lyricLines.splice(i, 0, '</p></div><div class="col"><p>');
                 // remove any immediately following blank lines
-                while (lyricLines[i+1].trim() == "") {
-                    wrapAt++;
-                    lyricLines.splice(i+1,1);
-                }
-                i = wrapAt + linesPerColumn + 1;
-            }
+                //while (lyricLines[i+1].trim() == "") {
+                    //wrapAt++;
+                    //lyricLines.splice(i+1,1);
+                //}
+                //i = wrapAt + linesPerColumn + 1;
+            //}
 
             let lyrics = lyricLines
                 .join("\n")
-                .replace(/^/,'<p>')
-                .replace(/$/,'</p>')
-                .replace(/\n\n/g,'</p><p>')
-                .replace(/(?<!<p>)\n/g, '<br />')
-                .replace(/\t/g,' ')
+                .replace(/[\t]+/g,'')
+                .replace(/^[\n]?/,'<div class="stanza"><p>')
+                .replace(/$/,'</p></div>')
+                .replace(/\n\n/g,'</p></div><div class="stanza"><p>')
+                .replace(/(?<!<p>)[ ]*\n/g, '</p><p>')
+                // // .replace(/<br \/><br \/>/g,'<br />')
+                // // .replace(/(?<!<p>)\n/g, '<span class="break"> // </span>')
+                // .replace(/\t/g,' ')
                 .replace(/^\s+|\s+$|\s+(?=\s)/g, "");
 
             let chords = '';
@@ -247,39 +250,43 @@
                 });
 
             const html = 
-                `<div id="Page${song.pageIndex}" class="page song position-relative h-100 w-100">` +
+                `<div id="Page${song.pageIndex}" class="container-fluid page song h-100 w-100">` +
                     ((showPageNumbers) ?
                         `<div class="number">${song.pageIndex}</div>` :
                         '' 
                     ) +
-                    `<div class="container-fluid header">
-                        <div class="row">
-                            <div class="col">
-                                <h3 class="title">${song.title}` +
-                                    ((song.key) ? 
-                                        ` <strong class="key">${song.key}</strong>` : 
-                                        ''
-                                    ) +
-                                `</h3>
+                    `<div class="row">
+                        <div class="col columnar">
+                            <div class="container-fluid header">
+                                <div class="row">
+                                    <div class="col">
+                                        <h3 class="title position-relative">${song.title}` +
+                                            ((song.key) ? 
+                                                ` <div class="key">${song.key.replace(/#/,'<sup>&#x266f;</sup>').replace(/b/g,'<sup>&#x266d;</sup>')}</div>` : 
+                                                ''
+                                            ) +
+                                        `</h3>
+                                    </div>
+                                </div>
+                                <div class="row subtitle pr-2 pl-2">
+                                    <div class="col text-right">
+                                        <span class="subtitle">${subtitle}</span>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row subtitle">
-                            <div class="col">
-                                <span class="subtitle text-secondary">${subtitle}</span>
+                            <div class="container-fluid body">` +
+                                ((song.notes) ?
+                                    `<div class="row notes">
+                                        <div class="col">${song.notes}</div>
+                                    </div>` :
+                                    '') +                        
+                                `<div class="row lyrics">
+                                    <div class="col">${lyrics}</div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="container-fluid body">` +
-                        ((song.notes) ?
-                            `<div class="row notes">
-                                <div class="col">${song.notes}</div>
-                            </div>` :
-                            '') +                        
-                        `<div class="row lyrics">
-                            <div class="col">${lyrics}</div>
-                        </div>
-                        ${chords}
-                    </div>
+                    ${chords}
                 </div>`;
             songIndex++;
 
