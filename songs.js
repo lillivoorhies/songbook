@@ -829,7 +829,7 @@ let songs =
 	{
 		key: "",
 		title: "Before I Grow Too Old",
-		writtenBy: "Dave Bartholomew / Antoine Domino / Robert Charles Guidry",
+		writtenBy: "Dave Bartholomew, Antoine Domino & Robert Charles Guidry",
 		year: null,
 		lyrics: `
 			I'm goin' to go out dancin' every night
