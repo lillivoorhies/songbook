@@ -42,18 +42,18 @@ a:hover { text-decoration: none; }
 
 #Index .title p {
     margin: 0;
-    padding-left: 1rem;
+    padding-left: 0.8rem;
 }
 
 #Index .title p:first-of-type {
-    text-indent: -1rem;
+    text-indent: -0.8rem;
 }
 
 .song, .page  {
     width: 100%;
     height: 100%;
     background-color: #fff;
-    padding: 0.25in;
+    padding: 0.20in;
     border: 1px solid black;
     overflow: hidden;
 }
@@ -65,7 +65,7 @@ a:hover { text-decoration: none; }
 }
 
 .page .header {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
 }
 
 .page .columns-2 {
@@ -84,27 +84,26 @@ a:hover { text-decoration: none; }
     color: #fff;
     background-color: #999;
     font-family: 'Merriweather';
-    font-size: 48pt;
-    line-height: 36pt;
-    padding: 10px;
+    font-size: 38pt;
+    line-height: 28pt;
+    padding: 8px;
     margin-bottom: 0;
-    letter-spacing: -6pt;
+    letter-spacing: -4pt;
     /* -webkit-text-stroke: 1px black; */
 
 }
 
 .song .key {
     position: absolute;
-    height: 40px;
-    width: 40px;
-    border-radius: 20px;
-    top: -10px;
-    right: -10px;
+    height: 32px;
+    width: 32px;
+    border-radius: 16px;
+    top: -8px;
+    right: -8px;
     font-weight: bolder;
     padding: 2px;
-    font-size: 16pt;
+    font-size: 12pt;
     text-align: center;
-    vertical-align: ;
     color: #fff;
     border: 1px solid #ccc;
     background-color: #666;
@@ -114,20 +113,20 @@ a:hover { text-decoration: none; }
     color: #333;
     text-transform: uppercase;
     font-family: 'Oswald';
-    font-size: 12pt;
+    font-size: 10pt;
 }
 
 .notes {
     font-family: "Gentium Book Basic", Georgia, 'Times New Roman', Times, serif;
-    font-size: 1.2em;
-    margin-bottom: 1rem;
+    font-size: 1em;
+    margin-bottom: 0.8rem;
 }
 
 .song .lyrics {
     font-family: "Caveat";
     color: #333;
-    font-size: 18pt;
-    line-height: 16pt;
+    font-size: 14pt;
+    line-height: 12pt;
 
 }
 
@@ -136,18 +135,20 @@ a:hover { text-decoration: none; }
 }
 
 .song .lyrics .stanza {
-    margin-bottom: 1rem;
+    /* text-align: justify;
+    text-align-last: justify; */
+    margin-bottom: 0.8rem;
     -webkit-column-break-inside: avoid;
 }
 
 .song .lyrics p {
     margin-bottom: 0;    
-    text-indent: -2rem;
-    padding-left: 2rem;
+    text-indent: -1.6rem;
+    padding-left: 1.6rem;
 }
 
 .song .chord-section {
-    margin-top: 1rem;
+    margin-top: 0.8rem;
 }
 
 .song .chord-bar {

@@ -2771,8 +2771,8 @@ let songs =
 	},
 	{
 		key: "",
-		title: "Heaven (Bryan Adams)",
-		writtenBy: "",
+		title: "Heaven",
+		writtenBy: "Bryan Adams",
 		year: null,
 		lyrics: `
 			Oh thinkin' about all our younger years
