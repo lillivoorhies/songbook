@@ -70,8 +70,8 @@
     </div>
 
     <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
-    <script src="songs.json"></script>
     <script src="DynamicTableClass-2.3.js"></script>
+    <script src="songs.js"></script>
     <script>
 
         let showIndex = false;
@@ -148,11 +148,6 @@
             
             let filteredSongs = songsTable.filteredTable; 
             filteredSongs.forEach(function (song) { 
-                // if(i != 1 && i % columnsPerPage == 0) {
-                //     html += colFooter + colHeader;
-                // }
-                // if cols > 3, new page
-
                 if(lineOnPage != 1 && lineOnPage >= linesPerColumn) {
                     html += colFooter + colHeader;
                     lineOnPage = 1;
