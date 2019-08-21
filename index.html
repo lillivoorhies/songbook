@@ -21,9 +21,9 @@
 
 </head>
 
-<body class="h-100">
+<body class="h-100 w-100">
 
-    <div id="Book">
+    <div id="Book w-100 h-100" style="padding: 0.5in;">
 		<div class="container-fluid" id="Intro">
             <div class="row">
                 <div class="col-7">
@@ -247,7 +247,7 @@
                 });
 
             const html = 
-                `<div id="Page${song.pageIndex}" class="page song position-relative">` +
+                `<div id="Page${song.pageIndex}" class="page song position-relative h-100 w-100">` +
                     ((showPageNumbers) ?
                         `<div class="number">${song.pageIndex}</div>` :
                         '' 
