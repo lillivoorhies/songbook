@@ -5,3 +5,4 @@
  . [x] accept filter from querystring q=
  . page not working on mobile  
  . https://codepen.io/kchez/pen/YwedPb
+ . checkbox for tag filter

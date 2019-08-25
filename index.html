@@ -24,7 +24,7 @@
 <body>
 
     <!-- <div id="Book w-100 h-100"  > -->
-		<div class="container-fluid d-none" id="Intro">
+		<div class="container-fluid " id="Intro">
             <div class="row">
                 <div class="col-7">
                     <h3 class="title">Steve's Songbook</h3>
@@ -49,10 +49,10 @@
                 </div>
             </div>
             <div class="row options">
-                <div class="col-4">
+                <div class="col-2">
                     <h3>Options</h3>
                 </div>
-                <div class="col-8">
+                <div class="col-2">
                     <div class="custom-control custom-switch">
                         <input type="checkbox" class="custom-control-input" id="showIndex" onClick="toggleIndex()">
                         <label class="custom-control-label" for="showIndex">Show index</label>
@@ -62,6 +62,12 @@
                         <label class="custom-control-label" for="showPageNumbers">Show page numbers</label>
                     </div>
                 </div>
+                <div class="col-8" id="Tags">
+                    <p class="mb-0">Choose tags:</p>
+                    <div class="form-group">
+                    </div>
+                </div>
+    
             </div>
             <!-- Options: toggle index, tags, etc -->
 		</div>
@@ -94,12 +100,22 @@
             }
         });
 
-        function filterSongs (query) {
-            songIndex = 1;
+        function filterText (query) {
             songsTable.filter('songsFilter', query, [
                 {key: 'title', logic: songsTable.filterLogicEnum.WordStartsWith},
                 {key: 'writtenBy', logic: songsTable.filterLogicEnum.WordStartsWith}
             ]);
+        }
+
+        function filterTags () {
+            let tagCheckboxContainer = document.querySelector("#Tags .form-group");
+            if (!tagCheckboxContainer) return false;
+
+            let tagCheckboxes = tagCheckboxContainer.querySelectorAll("input[type=checkbox]:checked");
+            let selectedTags = [];
+            tagCheckboxes.forEach(tagCheckbox => selectedTags.push(tagCheckbox.value));
+
+            songsTable.filter('FilterTags', selectedTags, [{key: 'tags', logic: songsTable.filterLogicEnum.ArrayHasMatch}]);
         }
 
         function getUrlParameter(name) {
@@ -111,18 +127,23 @@
 
         function togglePageNumbers() {
             showPageNumbers = !showPageNumbers;
-            update();
+            songsTable.update();
         }
 
         function toggleIndex() {
             showIndex = !showIndex;
-            update();
+            songsTable.update();
+        }
+
+        function onUpdate() {
+            generateIndex();
+            songIndex = 1;
         }
 
         function generateIndex () {
             const indexContainer = document.getElementById("Index");
             indexContainer.innerHTML = '';
-            let filteredSongs = songsTable.filteredTable; 
+            let filteredSongs = (songsTable) ? songsTable.filteredTable : this.filteredTable; 
             if (!showIndex || filteredSongs.length === 1) return;
 
             const pageHeader = `
@@ -171,11 +192,39 @@
             indexContainer.innerHTML = html;
         }
 
+        function capitalizeFirstLetter(string) {
+            return string.charAt(0).toUpperCase() + string.slice(1);
+        }
+
+        function generateTagList () {
+            let tagCheckboxContainer = document.querySelector("#Tags .form-group");
+            if (!tagCheckboxContainer) return false;
+
+            let tagList = [];
+            songs.forEach(song => (song.tags) ? 
+                song.tags.forEach (tag => tagList.push(tag)) :
+                false);
+            tagList.sort();
+            tagList = [...new Set(tagList)];
+
+            let tagCheckboxes = '';
+            tagList.forEach(tag => 
+                tagCheckboxes += `
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="tag-${tag}" value="${tag}" onclick="filterTags()">
+                        <label class="form-check-label" for="tag-${tag}">${capitalizeFirstLetter(tag)}</label>
+                    </div>`
+            );
+
+            tagCheckboxContainer.innerHTML = tagCheckboxes;
+
+        } generateTagList();
+
         let songIndex = 1;
         var songsTable = new DynamicTable({
             itemsName: 'Songs', 
             dataObject: songs, 
-            onUpdateFunction: generateIndex,
+            onUpdateFunction: onUpdate,
             rowRenderFunction: (song) => {
                 song.pageIndex = songIndex;
 
@@ -321,13 +370,6 @@
         //     document.querySelector(".search_input").value = query;
         //     filterSongs(query);
         // }
-
-
-        function update() {
-            songIndex = 1;
-            songsTable.update();
-        } update();
-
         
     </script>
 </body>

@@ -1523,6 +1523,7 @@ let songs =
 		title: "Bring It On Home To Me",
 		writtenBy: "Sam Cooke",
 		year: null,
+		tags: ["soul"],
 		lyrics: `
 			If you ever change your mind
 			About leaving, leaving me behind
@@ -1596,6 +1597,7 @@ let songs =
 		title: "Une Grosse Erreur",
 		writtenBy: "Iry Lejeune",
 		year: null,
+		tags: ["cajun"],
 		lyrics: `
 			Quand j'ai quitté de la maison, 
 			Moi je croyais j'avais raison,
@@ -1686,6 +1688,7 @@ let songs =
 		title: "If I Had My Life To Live Over",
 		writtenBy: "Moe Jaffe / Henry H. Tobias / Larry Vincent",
 		year: null,
+		tags: ["swing"],
 		lyrics: `
 			If I had my life to live over
 			I'd do the same things again
@@ -1716,6 +1719,7 @@ let songs =
 		title: "I'm Gonna Sit Right Down And Write Myself A Letter",
 		writtenBy: "",
 		year: null,
+		tags: ["swing"],
 		lyrics: `
 			I'm gonna sit right down and write myself a letter
 			And make believe it came from you
@@ -1733,6 +1737,7 @@ let songs =
 		key: "",
 		title: "Just A Closer Walk With Thee",
 		writtenBy: "Traditional",
+		tags: ["gospel"],
 		year: null,
 		lyrics: `
 			I am weak but Thou art strong
@@ -2482,6 +2487,7 @@ let songs =
 		title: "I'm Satisfied With You",
 		writtenBy: "Hank Williams",
 		year: null,
+		tags: ["country"],
 		lyrics: `
 			You don't dress up in satin,
 			You don't wear diamond rings,
@@ -2512,6 +2518,7 @@ let songs =
 		title: "Don't Fence Me In",
 		writtenBy: "",
 		year: null,
+		tags: ["folk"],
 		lyrics: `
 			Oh, give me land, lots of land under starry skies above
 			Don't fence me in
