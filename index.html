@@ -100,7 +100,6 @@
                 {key: 'title', logic: songsTable.filterLogicEnum.WordStartsWith},
                 {key: 'writtenBy', logic: songsTable.filterLogicEnum.WordStartsWith}
             ]);
-            generateIndex();
         }
 
         function getUrlParameter(name) {
@@ -123,7 +122,8 @@
         function generateIndex () {
             const indexContainer = document.getElementById("Index");
             indexContainer.innerHTML = '';
-            if (!showIndex) return;
+            let filteredSongs = songsTable.filteredTable; 
+            if (!showIndex || filteredSongs.length === 1) return;
 
             const pageHeader = `
                 <div class="container-fluid page">
@@ -146,7 +146,6 @@
             let column = 1;
             let prevLetter = '1';
             
-            let filteredSongs = songsTable.filteredTable; 
             filteredSongs.forEach(function (song) { 
                 if(lineOnPage != 1 && lineOnPage >= linesPerColumn) {
                     html += colFooter + colHeader;
@@ -173,128 +172,134 @@
         }
 
         let songIndex = 1;
-        var songsTable = new DynamicTable('Songs', songs, (song) => {
-            song.pageIndex = songIndex;
+        var songsTable = new DynamicTable({
+            itemsName: 'Songs', 
+            dataObject: songs, 
+            onUpdateFunction: generateIndex,
+            rowRenderFunction: (song) => {
+                song.pageIndex = songIndex;
 
-            const writtenBy = (song.writtenBy && song.writtenYear) ? 
-                    `Written by ${song.writtenBy} (${song.writtenYear})` : 
-                (song.writtenBy) ? 
-                    `Written by ${song.writtenBy}` : 
-                (song.writtenYear) ? 
-                    `Written in ${song.writtenYear}` :
-                    "";
+                const writtenBy = (song.writtenBy && song.writtenYear) ? 
+                        `Written by ${song.writtenBy} (${song.writtenYear})` : 
+                    (song.writtenBy) ? 
+                        `Written by ${song.writtenBy}` : 
+                    (song.writtenYear) ? 
+                        `Written in ${song.writtenYear}` :
+                        "";
 
-            const recordedBy = (song.recordedBy && song.recordedYear) ? 
-                    `Recorded by ${song.recordedBy} (${song.recordedYear})` : 
-                (song.recordedBy) ? 
-                    `Recorded by ${song.recordedBy}` : 
-                (song.recordedYear) ? 
-                    `Recorded in ${song.recordedYear}` :
-                    "";
+                const recordedBy = (song.recordedBy && song.recordedYear) ? 
+                        `Recorded by ${song.recordedBy} (${song.recordedYear})` : 
+                    (song.recordedBy) ? 
+                        `Recorded by ${song.recordedBy}` : 
+                    (song.recordedYear) ? 
+                        `Recorded in ${song.recordedYear}` :
+                        "";
 
-            const subtitle = `${writtenBy}` + 
-                ((writtenBy && recordedBy) ? ` and ` : "")
-                + `${recordedBy}`;
-            
-            const lyricLines = song.lyrics.split("\n");
-            const linesPerColumn = 20;
-            let i = linesPerColumn + 1;
-            //while (i < lyricLines.length - 1) {
-                //let wrapAt = i;
-                // find last blank line
-                //while (lyricLines[i].trim() != "" && i>0) {i--;}
-                // if no blank lines found, go back to wrap line
-                //if (i == 0) { i = wrapAt; }
-                //lyricLines.splice(i, 0, '</p></div><div class="col"><p>');
-                // remove any immediately following blank lines
-                //while (lyricLines[i+1].trim() == "") {
-                    //wrapAt++;
-                    //lyricLines.splice(i+1,1);
+                const subtitle = `${writtenBy}` + 
+                    ((writtenBy && recordedBy) ? ` and ` : "")
+                    + `${recordedBy}`;
+                
+                const lyricLines = song.lyrics.split("\n");
+                const linesPerColumn = 20;
+                let i = linesPerColumn + 1;
+                //while (i < lyricLines.length - 1) {
+                    //let wrapAt = i;
+                    // find last blank line
+                    //while (lyricLines[i].trim() != "" && i>0) {i--;}
+                    // if no blank lines found, go back to wrap line
+                    //if (i == 0) { i = wrapAt; }
+                    //lyricLines.splice(i, 0, '</p></div><div class="col"><p>');
+                    // remove any immediately following blank lines
+                    //while (lyricLines[i+1].trim() == "") {
+                        //wrapAt++;
+                        //lyricLines.splice(i+1,1);
+                    //}
+                    //i = wrapAt + linesPerColumn + 1;
                 //}
-                //i = wrapAt + linesPerColumn + 1;
-            //}
 
-            let lyrics = lyricLines
-                .join("\n")
-                .replace(/[\t]+/g,'')
-                .replace(/^[\n]?/,'<div class="stanza"><p>')
-                .replace(/$/,'</p></div>')
-                .replace(/\n\n/g,'</p></div><div class="stanza"><p>')
-                .replace(/(?<!<p>)[ ]*\n/g, '</p><p>')
-                // // .replace(/<br \/><br \/>/g,'<br />')
-                // // .replace(/(?<!<p>)\n/g, '<span class="break"> // </span>')
-                // .replace(/\t/g,' ')
-                .replace(/^\s+|\s+$|\s+(?=\s)/g, "");
+                let lyrics = lyricLines
+                    .join("\n")
+                    .replace(/[\t]+/g,'')
+                    .replace(/^[\n]?/,'<div class="stanza"><p>')
+                    .replace(/$/,'</p></div>')
+                    .replace(/\n\n/g,'</p></div><div class="stanza"><p>')
+                    .replace(/(?<!<p>)[ ]*\n/g, '</p><p>')
+                    // // .replace(/<br \/><br \/>/g,'<br />')
+                    // // .replace(/(?<!<p>)\n/g, '<span class="break"> // </span>')
+                    // .replace(/\t/g,' ')
+                    .replace(/^\s+|\s+$|\s+(?=\s)/g, "");
 
-            let chords = '';
-            if(song.chordSections)
-                song.chordSections.forEach(function (section) {
-                    let chordProgression = '';
-                    section.chordBars.forEach(function (bar) {
-                        chordProgression += `
-                            <div class="col-3 chord-bar text-center">
-                                ${bar.replace(/ /g, ' &nbsp;')}
+                let chords = '';
+                if(song.chordSections) {
+                    song.chordSections.forEach(function (section) {
+                        let chordProgression = '';
+                        section.chordBars.forEach(function (bar) {
+                            chordProgression += `
+                                <div class="col-3 chord-bar text-center">
+                                    ${bar.replace(/ /g, ' &nbsp;')}
+                                </div>`;
+                        });
+                        chords += `
+                            <div class="row chord-section">
+                                <div class="col-4 chord-section-title">${section.name.toUpperCase()}</div>
+                                <div class="col-8 chord-section-progression">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            ${chordProgression}
+                                        </div>
+                                    </div>
+                                </div>    
                             </div>`;
                     });
-                    chords += `
-                        <div class="row chord-section">
-                            <div class="col-4 chord-section-title">${section.name.toUpperCase()}</div>
-                            <div class="col-8 chord-section-progression">
-                                <div class="container-fluid">
+                }
+
+                let columns = Math.ceil(lyricLines.length/linesPerColumn);
+                console.log(`Song: ${song.title}, Lyrics lines: ${lyricLines.length}, Columns: ${columns}`);
+
+                const html = 
+                    `<div id="Page${song.pageIndex}" class="container-fluid page song h-100 w-100">` +
+                        ((showPageNumbers) ?
+                            `<div class="number">${song.pageIndex}</div>` :
+                            '' 
+                        ) +
+                        `<div class="row">
+                            <div class="col columns-${columns}">
+                                <div class="container-fluid header">
                                     <div class="row">
-                                        ${chordProgression}
+                                        <div class="col">
+                                            <div class="position-relative">
+                                                <h3 class="title">${song.title}</h3>` +
+                                                ((song.key) ? 
+                                                    ` <div class="key">${song.key.replace(/#/,'<sup>&#x266f;</sup>').replace(/b/g,'<sup>&#x266d;</sup>')}</div>` : 
+                                                    ''
+                                                ) +
+                                            `</div>
+                                        </div>
+                                    </div>
+                                    <div class="row subtitle pr-2 pl-2">
+                                        <div class="col text-right">
+                                            <span class="subtitle">${subtitle}</span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>    
-                        </div>`;
-                });
-
-            let columns = Math.ceil(lyricLines.length/linesPerColumn);
-            console.log(`Song: ${song.title}, Lyrics lines: ${lyricLines.length}, Columns: ${columns}`);
-
-            const html = 
-                `<div id="Page${song.pageIndex}" class="container-fluid page song h-100 w-100">` +
-                    ((showPageNumbers) ?
-                        `<div class="number">${song.pageIndex}</div>` :
-                        '' 
-                    ) +
-                    `<div class="row">
-                        <div class="col columns-${columns}">
-                            <div class="container-fluid header">
-                                <div class="row">
-                                    <div class="col">
-                                        <div class="position-relative">
-                                            <h3 class="title">${song.title}</h3>                                        ` +
-                                            ((song.key) ? 
-                                                ` <div class="key">${song.key.replace(/#/,'<sup>&#x266f;</sup>').replace(/b/g,'<sup>&#x266d;</sup>')}</div>` : 
-                                                ''
-                                            ) +
-                                        `</div>
+                                <div class="container-fluid body">` +
+                                    ((song.notes) ?
+                                        `<div class="row notes">
+                                            <div class="col">${song.notes}</div>
+                                        </div>` :
+                                        '') +                        
+                                    `<div class="row lyrics">
+                                        <div class="col">${lyrics}</div>
                                     </div>
-                                </div>
-                                <div class="row subtitle pr-2 pl-2">
-                                    <div class="col text-right">
-                                        <span class="subtitle">${subtitle}</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="container-fluid body">` +
-                                ((song.notes) ?
-                                    `<div class="row notes">
-                                        <div class="col">${song.notes}</div>
-                                    </div>` :
-                                    '') +                        
-                                `<div class="row lyrics">
-                                    <div class="col">${lyrics}</div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    ${chords}
-                </div>`;
-            songIndex++;
+                        ${chords}
+                    </div>`;
+                songIndex++;
 
-            return html;
+                return html;
+            }
         });
 
         var urlParams = new URLSearchParams(window.location.search);
@@ -321,7 +326,6 @@
         function update() {
             songIndex = 1;
             songsTable.update();
-            generateIndex();
         } update();
 
         
