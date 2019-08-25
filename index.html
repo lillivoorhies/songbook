@@ -73,13 +73,17 @@
         <div id="SongsTable" class="h-100 w-100"></div>
     <!-- </div> -->
 
-    <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
-    <script src="popper.min.js"></script>
+    <!-- <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+    <script src="popper.min.js"></script> -->
     <script src="DynamicTableClass-2.3.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://s3.amazonaws.com/bootstrap.ots/main-44c6dd.js" crossorigin="anonymous"></script>
+
     <script src="songs.js"></script>
     <script>
 
-        let showIndex = false;
+        let showIndex = true;
         let showPageNumbers = false;
         
         songs = songs.filter((a) => a.lyrics.trim() != "");
@@ -135,15 +139,14 @@
         }
 
         function onUpdate() {
-            generateIndex();
-            generateTagList();
+            generateIndex.call(this);
             songIndex = 1;
         }
 
         function generateIndex () {
             const indexContainer = document.getElementById("Index");
             indexContainer.innerHTML = '';
-            let filteredSongs = (songsTable) ? songsTable.filteredTable : this.filteredTable; 
+            let filteredSongs = (!songsTable) ? this.filteredTable : songsTable.filteredTable; 
             if (!showIndex || filteredSongs.length === 1) return;
 
             const pageHeader = `
@@ -220,7 +223,7 @@
 
             tagCheckboxContainer.innerHTML = tagCheckboxes;
 
-        } 
+        } generateTagList();
 
         let songIndex = 1;
         var songsTable = new DynamicTable({
