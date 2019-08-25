@@ -6,3 +6,6 @@
  . page not working on mobile  
  . https://codepen.io/kchez/pen/YwedPb
  . checkbox for tag filter
+ . implement bootstrap carousel
+ . buttons for next page
+ . index as mmenu

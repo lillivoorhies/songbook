@@ -80,7 +80,7 @@ a:hover { text-decoration: none; }
     columns: 4;
 }
 
-.song .title, #Intro .title {
+.song .title, #Header .title {
     color: #fff;
     background-color: #999;
     font-family: 'Merriweather';
@@ -165,7 +165,7 @@ a:hover { text-decoration: none; }
         margin: 1in 0.5in
     }
 
-    #Intro {
+    #Header {
         display: none;
     }    
 
