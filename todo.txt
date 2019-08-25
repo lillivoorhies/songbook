@@ -9,3 +9,5 @@
  . implement bootstrap carousel
  . buttons for next page
  . index as mmenu
+ . header, options and filters as collapsible menu at top of page
+ . figure out why tags dropdown isn't working
