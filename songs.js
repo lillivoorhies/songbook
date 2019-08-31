@@ -4121,7 +4121,1315 @@ let songs =
 				}
 			]
 	
-	}
+	},
+	{
+		key: "",
+		title: "Sweet Dreams",
+		writtenBy: "Don Gibson",
+		performedBy: "Patsy Cline",
+		lyrics: `
+			Sweet dreams of you
+			Every night I go through
+			Why can't I forget you and start my life anew
+			Instead of having sweet dreams about you
+			
+			You don't love me, it's plain
+			I should know I'll never wear your ring
+			I should hate you the whole night through
+			Instead of having sweet dreams about you
+			
+			Sweet dreams of you
+			Things I know can't come true
+			Why can't I forget the past, start loving someone new
+			Instead of having sweet dreams about you
+			`
+	},
+	{
+		key: "",
+		title: "Way Out On The Mountain",
+		writtenBy: "Jimmie Rodgers",
+		year: null,
+		lyrics: `
+			I'll pack my grip for a farewell trip
+			Kiss Susie Jane goodbye at the fountain
+			I'm going, said I, to the land of the sky
+			Away out on the mountain
 
+			Where the wild sheep grows and the buffalo lows
+			And the squirrels are so many you can't count them
+			Then I'll make love to some turtle dove
+			Way out on the mountain
+
+			When the north winds blow and we're gonna have snow
+			And the rain and the hail comes bouncing
+			I'll wrap myself in a grizzly bear coat
+			Away out on the mountain
+
+			Where the snakes are vile and the zebras? wild
+			And the beavers paddle on walking canes
+			Then I'll send my boots with a buffalo hide
+			Away out on the mountain
+
+			Where the whippoorwills sing me to sleep at night
+			And the eagle roosts on the rocks of spontan
+			I'll feast on the meat and the honey so sweet
+			Way out on the mountain
+			`
+	},
+	{
+		key: "",
+		title: "Waiting for a Train",
+		writtenBy: "Jimmie Rodgers",
+		year: null,
+		lyrics: `
+			All around the water tank waiting for a train
+			A thousand miles away from home sleeping in the rain
+			I walked up to a brakeman gave him a line of talk
+			He said if you've got money boy I'll see that you don't walk
+			I haven't got a nickel not a penny can I show
+			Get off get off you railroad bum and he slammed the boxcar door
+
+			He put me off in Texas a state I dearly love
+			The wide open spaces all around me the moon and stars up above
+			Nobody seems to want me or to lend me a helping hand
+			I'm on my way from Frisco going back to Dixie Land
+			Though my pocketbook is empty and my heart is full of pain
+			I'm a thousand miles away from home just a waiting for a train
+			`
+	},
+	{
+		key: "",
+		title: "Tennessee Blues",
+		writtenBy: "Robert Charles Guidry",
+		year: null,
+		lyrics: `
+			If I had my way
+			I'd leave here today I move in a hurry
+			I find me a place where I could stay
+			And not have to worry
+
+			A place I feel loose
+			A place I could lose, these Tennessee Blues
+
+			I'd find me a spot on some mountain top
+			With no one around me
+			Vallies and streams birds in the trees
+			With lakes that surround me
+
+			A place I feel loose
+			A place I could lose, these Tennessee Blues
+
+			A place to forget all my regrets
+			And keep just the good times
+			Some place I could sleep with nothing but peace
+			Feel free at all times
+
+			A place I feel loose
+			Some place I could lose, these Tennessee Blues
+			Some place I could lose, these Tennessee Blues
+			`
+	},
+	{
+		key: "",
+		title: "White Dove",
+		writtenBy: "Carter Stanley",
+		year: null,
+		lyrics: `
+			In the deep rolling hills of old Virginia
+			There's a place that I love so well
+			Where I spent many days of my childhood
+			In the cabin where we loved to dwell
+
+			White dove will mourn in sorrow
+			The willows will hang their heads
+			I'll live my life in sorrow
+			Since mother and daddy are dead
+
+			We were all so happy there together
+			In our peaceful little mountain home
+			But the Savior needs angels up in heaven
+			Now they sing around the great white throne
+
+			As the years roll by I often wonder
+			If we will all be together someday
+			And each night as I wander through the graveyard
+			Darkness finds me as I kneel to pray
+			`
+	},
+	{
+		key: "",
+		title: "Old Home Place",
+		writtenBy: "Dean Webb & Mitchell Jane",
+		year: null,
+		lyrics: `
+			It's been ten long years since I left my home
+			In the hollow where I was born
+			Where the cool fall nights make the wood smoke rise
+			And the foxhunter blows his horn
+
+			I fell in love with a girl from the town
+			I thought that she would be true
+			I ran away to Charlottesville 
+			And worked in a sawmill or two
+
+			What have they done to the old home place 
+			Why did they tear it down
+			And why did I leave the plow in the field
+			And look for a job in the town
+
+			Well my girl she ran off with somebody else
+			The taverns took all my pay
+			And here I stand where the old home stood
+			Before they took it away
+
+			Now the geese they fly south and the cold wind blows
+			As I stand here and hang my head
+			I've lost my love I've lost my home
+			And now I wish that I was dead
+			`
+	},
+	{
+		key: "",
+		title: "Les Amours et les Beaux Jours",
+		writtenBy: "Davoust Berard (Caesar Vincent?)",
+		year: null,
+		lyrics: `
+			Les amours et les beaux jours
+			Ils sont beaux mais ils sont courts
+			Les amours et les beaux jours
+			Ils sont beaux mais ils sont courts
+
+			On fait l'amour et quand on peut,
+			et quand on peut, et quand on peut
+			On fait l'amour et quand on peut,
+			Mais pas et quan on veut
+
+			Si j'avais un amant
+			Qui m'aimerai si tendrement
+			Si j'avais un amant
+			Qui m'aimerai si tendrement
+
+			Je lui ferai autant de biens
+			Autant de biens, autant de biens
+			Je lui ferai autant de biens
+			Son coeur serait le mien
+
+			Le matin en me levant
+			Je bois un coup petit quart de vin
+			Le matin en me levant
+			Je bois un coup petit quart de vin
+
+			C'est pour penser a l'amour
+			A l'amour, a l'amour
+			C'est pour penser a l'amour
+			Le reste de mes jours	
+			`
+	},
+	{
+		key: "",
+		title: "Over Yonder In The Graveyard",
+		writtenBy: "",
+		year: null,
+		lyrics: `
+			Over yonder in the graveyard
+			Where the wild wild flowers grow
+			Oh there they laid my own true lover
+			She’s gone from me forever more
+
+			Fairer than the sweetest flowers
+			Restless as a wildest wind
+			Born with love deep as the ocean
+			This is the girl that I did win
+
+			I left her there back in the mountains
+			To see the world riches to gain
+			When I returned no earthly treasure
+			Could ease this heart so full of pain
+
+			There so high upon that mountain
+			Beneath that little mound of clay
+			Oh the girl that I’d returned to marry
+			So still among the flowers did lay
+
+			I’ll go away and I will wander
+			Lay aside my earthly gains
+			And I’ll not end as a man with riches
+			Undone in sorry I’ll remain
+			`
+	},
+	{
+		key: "",
+		title: "Mary And The Soldier",
+		writtenBy: "",
+		year: null,
+		lyrics: `
+			Come all you lads of high renown that will hear of a fair young maiden
+			And she roved out on a summer's day for to view the soldier's parading
+
+			They march so bold and they look so gay
+			The colours fine and the bands did play
+			And it caused young Mary for to say
+			"I'll wed you me gallant soldier"
+
+			She viewed the soldiers on parade and as they stood at their leisure
+			And Mary to herself did say: "At last I find my treasure
+
+			But oh how cruel my parents must be
+			To banish my true love away from me
+			Well I'll leave them all and I'll go with thee
+			Me bold and undaunted soldier"
+
+			"Oh Mary dear, your parents' love I pray don't be unruly
+			For when you're in a foreign land, believe you rue it surely
+
+			Perhaps in battle I might fall
+			From a shot from an angry cannonball
+			And you're so far from your daddy's hall
+			Be advised by a gallant soldier."
+
+			"Oh I have fifty guineas in right gold, likewise a hearth that's burning
+			And I'd leave them all and I'd go with you me bold undaunted soldier
+
+			So don't say no but let me go
+			And I will face the daring foe
+			And we'll march together to and fro
+			And I'll wed you, my gallant soldier"
+
+			And when he saw her loyalty and Mary so true-hearted
+			He said: "Me darling, married we'll be and nothing but death will part us
+
+			And when we're in a foreign land
+			I'll guard you, darling, with my right hand
+			And hopes that God might stand a friend
+			With Mary and her gallant soldier"
+			`
+	},
+	{
+		key: "",
+		title: "The Soldier and the Lady",
+		writtenBy: "",
+		year: null,
+		lyrics: `
+			One morning, one morning, one morning in May
+			I spied a young couple a wandering away
+			One was a lady as fair as can be
+			The other was a soldier and a brave lad was he
+			
+			Said the soldier to the lady, "Oh where are you going?"
+			"Just down by the orchard, just down by the tree"
+			"Just down by the orchard, just down by the tree"
+			"To see the waters gliding and the nightingale sing"
+			
+			They had not been there an hour or two
+			'Til from his satchel a fiddle he drew
+			He played a message that made the hills ring
+			"Hark hark," said the lady, "hear the nightingale sing"
+			
+			Said the lady to the soldier, "Will you marry me?"
+			"Oh no," cried the soldier, "that never can be!"
+			I have a wife in Columbus and children twice three
+			One wife is a plenty too many for me
+			
+			"Young lady, young lady, take warning by me"
+			"Don't place your affection on a soldier so free"
+			"Dont place your affection on a soldier so free"
+			"You'll be deceived like mine has done me"
+			`
+	},
+	{
+		key: "",
+		title: "Fortunes",
+		writtenBy: "Ola Belle Reed",
+		year: null,
+		lyrics: `
+			There are fortunes in a lifetime
+			All our money cannot buy
+			Like the tiny little snowflake
+			Slowly floating down from the sky
+			There are wonders never ceasing
+			Created by our Master's hand
+			But the greatest of all our fortunes
+			Its in God's promised land
+			
+			Oh the rich man with all of his money
+			All of his silver and all of his gold
+			He can't buy one breath of life
+			Or a home for his weary (eternal) soul
+			For that is bought and it is paid for (already)
+			By the blood of the blessed Lamb
+			Yes the greatest of all our fortunes
+			Its in God's promised land
+			
+			There are fortunes in a teardrop
+			There are fortunes in a smile
+			In the face of a weary pilgrim
+			Or the face of a little child
+			There are fortunes right in your Bible
+			If you'll read it well then you'll understand
+			But the greatest of all our fortunes
+			Its in God's promised land
+			`
+	},
+	{
+		key: "",
+		title: "Just Like Me",
+		writtenBy: "",
+		year: null,
+		lyrics: `
+			Un jour tu vas brailler just comme moi
+			Un jour tu voudras mourir juste comme moi
+			Quand ton your te quitte, tu seras un prisonnier chez toi
+			Enchaine par mermoires just comme moi
+
+			T'as tue ouais mon coeur
+			Quand t'as trouve un autre
+			Je voulais mourir quand t'as dit
+			Que tu m'aimerais plus
+
+			Un jour tu seras tout seul just comme moi
+			Et vivre sans un coeur juste comme moi
+			Quand ton your te quitte, tu seras un prisonnier chez toi
+			Enchaine par mermoires just comme moi
+
+			T'as tue ouais mon coeur
+			Quand t'as trouve un autre
+			Je voulais mourir quand t'as dit
+			Que tu m'aimerais plus
+
+			Un jour tu seras tout seul just comme moi
+			Et vivre sans un coeur juste comme moi
+			Quand ton your te quitte, tu seras un prisonnier chez toi
+			Enchaine par mermoires just comme moi
+			`
+	},
+	{
+		key: "",
+		title: "High On The Mountain",
+		writtenBy: "Ola Belle Reed",
+		year: null,
+		lyrics: `
+			High on the mountain, wind blowin' free
+			Wondering about the things that used to be.
+			High on the mountain, standing all alone,
+			Wondering where the years of my life have gone.
+			
+			As I looked at the valleys down below 
+			They were green just as far as I could see 
+			As my memory turned, O how my heart did yearn 
+			For you and the days that used to be.
+			
+			O I wonder if you ever think of me 
+			Or if time's blotted out your memory 
+			As I listen to that breeze whisperin gently through the trees 
+			All I hear is what you meant to me.
+			
+			High on the mountain, wind blowin' free
+			Wondering about the things that used to be.
+			High on the mountain, standing all alone,
+			Wondering where the years of my life have gone.
+			`
+	},
+	{
+		key: "",
+		title: "I've Endured",
+		writtenBy: "Ola Belle Reed",
+		year: null,
+		lyrics: `
+			Born in the mountains fifty years ago
+			I've trod the hills and valleys through the rain and snow
+			I've seen the lightning flashing I've heard the thunder roll
+			I've Endured I've Endured how long can one endure
+			
+			Barefoot in the summer on into the fail
+			Too many mouths to feed they couldn't clothe us all
+			Sent to church on Sunday to learn the golden rule
+			I've Endured I've Endured how long can one endured
+			
+			I've worked for the rich I've lived with the poor
+			I've see many a heartache there'll be many a more
+			Lived loved and sorrowed been to success's door
+			I've Endured I've Endured how long can one endured
+			`
+	},
+	{
+		key: "",
+		title: "I Am A Pilgrim",
+		writtenBy: "Roger Miller",
+		year: null,
+		lyrics: `
+			I am a pilgrim and a stranger 
+			Traveling through this wearisome land 
+			I've got a home in that yonder city, good Lord 
+			And it's not, not made by hand
+
+			I've got a mother, sister and a brother 
+			Who have gone this way before 
+			I am determined to go and see them, good Lord 
+			For they're on that other shore
+
+			I'm goin' down to the river of Jordan 
+			Just to bathe my wearisome soul 
+			If I can just touch the hem of his garment, good Lord 
+			Then I know he'd take me home
+
+			I am a pilgrim and a stranger 
+			Traveling through this wearisome land 
+			I've got a home in that yonder city, good Lord 
+			And it's not, not made by hand
+			`
+	},
+	{
+		key: "",
+		title: "Nine Pound Steel",
+		writtenBy: "",
+		year: null,
+		lyrics: `
+			Through these bars I see the sun
+			I'm here because (of) the wrong I done
+			My woman's needs made me ashamed
+			I stole for her, should've stood up like a man
+
+
+			...
+			`
+	},
+	{
+		key: "E",
+		title: "Got You On My Mind",
+		writtenBy: "",
+		year: null,
+		lyrics: `
+			Got you on my mind
+			That's why I'm feeling blue
+			Got you on my mind
+			I don't know what to do
+			
+			Everywhere I go
+			And everything I do
+			I want you to know
+			I've got you on my mind
+
+			Got you on my mind
+			But I'm not satisfied
+			Got you on my mind
+			'Cuz you're not by my side
+			
+			Everywhere I go
+			And everything I do
+			I want you to know
+			I've got you on my mind
+
+			Got you on my mind
+			That's why I'm feeling blue
+			Got you on my mind
+			I don't know what to do
+			
+			Everywhere I go
+			And everything I do
+			I want you to know
+			I've got you on my mind
+			`
+	},
+	{
+		key: "",
+		title: "Little Cabin Home On The Hill",
+		writtenBy: "Bill Monroe & Lester Flatt",
+		year: null,
+		lyrics: `
+			Tonight I'm alone without you my dear
+			It seems there's a longing for you still
+			All i have to do now is sit alone and cry
+			In our little cabin home on the hill
+
+			Oh someone has taken you from me
+			And left me here all alone
+			Just to listen to the rain beat on my window pane
+			In our little cabin home on the hill
+
+			I hope you are happy tonight as you are
+			But in my heart there's a longing for you still
+			I just keep it there so i won't be alone
+			In our little cabin home on the hill
+
+			Oh someone has taken you from me
+			And left me here all alone
+			Just to listen to the rain beat on my window pane
+			In our little cabin home on the hill
+
+			Now when you have come to the end of the way
+			And find there's no more happiness for you
+			Just let your thoughts turn back once more if you will
+			To our little cabin home on the hill
+
+			Oh someone has taken you from me
+			And left me here all alone
+			Just to listen to the rain beat on my window pane
+			In our little cabin home on the hill
+
+			Oh someone has taken you from me
+			And left me here all alone
+			Just to listen to the rain beat on my window pane
+			In our little cabin home on the hill
+			`
+	},
+	{
+		key: "",
+		title: "Beeswing",
+		writtenBy: "Richard John Thompson",
+		year: null,
+		lyrics: `
+			I was nineteen when I came to town
+			They called in the Summer of Love
+			They were burningbabies, burning flags
+			The Hawks against the Doves
+
+			I took a job in the Steamie
+			Down on Cauldrum Street
+			I fell in love with a laundry girl
+			Was working next to me
+
+			She was a rare thing
+			Fine as a beeswing
+			So fine a breath of wind might blow her away
+			She was a lost child
+			She was running wild, she said
+			As long as there's no price on love, I'll stay
+			And you wouldn't want me any other way
+
+			Brown hair zig-zag round her face
+			And a look of half-surprise
+			Like a fox caught in the headlights
+			There was an animal in her eyes
+
+			She said, young man, O can't you see
+			I'm not the factory kind
+			If you don't take me out of here
+			I'll surely lose my miind
+
+			She was a rare thing
+			Fine as a beeswing
+			So fine a breath of wind might blow her away
+			She was a lost child
+			She was running wild, she said
+			As long as there's no price on love, I'll stay
+			And you wouldn't want me any other way
+
+			We busked around the market towns
+			And picked fruit down in Kent
+			And we could tinker lamps and pots
+			And knives wherever we went
+
+			And I said that we might settle down
+			Get a few acres dug
+			Fire burning in the hearth
+			And babies on the rug
+
+			She said O man, you foolish man
+			It surely sounds like hell
+			You might be lord of half the world
+			You'll not own me as well
+
+			She was a rare thing
+			Fine as a beeswing
+			So fine a breath of wind might blow her away
+			She was a lost child
+			She was running wild, she said
+			As long as there's no price on love, I'll stay
+			And you wouldn't want me any other way
+
+			We was camping down the Gower one time
+			The work was pretty good
+			She thought we shouldn't wait for frost
+			And I thought maybe we should
+
+			We were drinking more in those days
+			And tempers reached a pitch
+			Like a fool I let her run
+			With the rambling itch
+
+			Last I hear she's sleeping out
+			Back on Derby beat
+			White Horse in her hip pocket
+			And a wolfhound at her feet
+
+			And they say she even married once
+			A man named Romany Brown
+			But even a Gypsy caravan
+			Was too much settliing down
+
+			And they say her flower is faded now
+			Hard weather and hard booze
+			But maybe that's just the price you pay
+			For the chains you refuse
+
+			She was a rare thing
+			Fine as a beeswing
+			And I missher more than ever words could say
+			If I could just taste
+			All of her wildness now
+			If I could hold her in my arms today
+			Then I wouldn't want her any other way
+			`
+	},
+	{
+		key: "",
+		title: "Walter Jacobs Vinson",
+		writtenBy: "Walter Jacobs Vinson",
+		year: null,
+		lyrics: `
+			One summer day
+			She went away
+			She gone an left me
+			She gone to stay
+
+			But now she gone
+			An' I don't worry
+			'Cause I'm sittin' on top of the world
+
+			Works all the summer
+			And worked all the fall
+			I had to take my Christmas
+			In my over-halls*
+
+			But now she's gone
+			An' I don't worry
+			Because I'm sittin' on top of the world
+
+			Goin' down to the freight yard
+			Just to meet a freight train
+			I'm gon' leave this town
+			Work has done gotten too hard
+
+			But now she's gone
+			And I don't worry
+			Because I'm sittin' on top of the world
+
+			One summer day
+			She went away
+			She gone an left me
+			She gone to stay
+
+			But now she gone
+			And I don't worry
+			Because I'm sittin' on top of the world
+			`
+	},
+	{
+		key: "",
+		title: "La Valse du Malchanceux",
+		writtenBy: "",
+		year: null,
+		lyrics: `
+			C'est ça la valse moi j'appelle 
+			La valse du malchanceux
+			C'est ça la valse qui jouait tant
+			Dans l'temps que je courtisais
+			C'est ça la valse qu'était apres jouer
+			Le soir éou je l'ai demandée
+			C'est ça la valse qu'était apres jouer
+			Quand son papa m'l'a refusée
+
+			C'est ça la valse qu'était apres jouer
+			Le soir que j'l'ai volée
+			C'est ça la valse qu'était apres jouer
+			Quand ils m'ont trouvé
+			C'est ça la valse qu'était apres jouer
+			Quand ils m'ont fait la marier
+			C'est ça la valse qu'était apres jouer
+			Quand on s'est separés
+
+			C'est la valse j'veux tu m'joues
+			Sur le lit de ma mort
+			C'est la valse j'veux tu m'joues
+			Le jour que j'vas mourir
+			C'est la valse j'veux tu m'joues
+			Jusqu'a la porte du cimitière
+			C'est ça la valse que moi j'vas appeler
+			La valse du malchanceux
+			`
+	},
+	{
+		key: "",
+		title: "I'm Busted",
+		writtenBy: "Rob Thomas",
+		performedBy: "Harlan Howard",
+		year: null,
+		lyrics: `
+			The bills are all due and my baby needs shoes 
+			But I'm busted 
+			Cotton is down to a quarter a pound 
+			But I'm busted
+			I got a cow that's gone dry and a hen that won't lay 
+			A big stack of bills that get bigger each day
+			The county's gonna haul my belongings away 
+			I'm busted.
+			
+			I called brother Bill, thought I'd get me a loan 
+			I was busted 
+			Lord, I hate to beg like a dog for a bone 
+			But I'm busted
+			But Bill said that "There ain't a thing I can do, 
+			My wife and my kids are all down with the flu, 
+			And I was just thinkin' about callin' on you, 
+			I'm busted."
+			
+			Now Lord, I'm no thief, but a man can go wrong 
+			When he's busted 
+			The food that we canned last summer is gone 
+			I'm busted
+			The fields are all bare and the cotton won't grow 
+			Me and my family's gotta pack up and go 
+			Where I'll make a living, the Lord only, knows 
+			I'm busted
+			`
+	},
+	{
+		key: "",
+		title: "Oh! Darling",
+		writtenBy: "The Beatles",
+		year: null,
+		lyrics: `
+			Oh! Darling, please believe me
+			I'll never do you no harm
+			Believe me when I tell you
+			I'll never do you no harm
+
+			Oh! Darling, if you leave me
+			I'll never make it alone
+			Believe me when I beg you
+			Don't ever leave me alone
+			
+			When you told me you didn't need me anymore
+			Well you know I nearly broke down and cried
+			When you told me you didn't need me anymore
+			Well you know I nearly broke down and died
+			
+			Oh! Darling, if you leave me
+			I'll never make it alone
+			Believe me when I tell you
+			I'll never do you no harm, believe me darlin'
+			
+			When you told me you didn't need me anymore
+			Well you know I nearly broke down and cried
+			When you told me you didn't need me anymore
+			Well you know I nearly fell down and died
+			
+			Oh! Darling, please believe me
+			I'll never let you down (Oh believe me darlin')
+			Believe me when I tell you
+			I'll never do you no harm
+			`
+	},
+	{
+		key: "",
+		title: "Newport Waltz",
+		writtenBy: "",
+		performedBy: "The Balfa Brothers",
+		year: null,
+		lyrics: `
+			Si ti vu avoir un bontemps,
+			On ti va á Newport au festival.
+			On ayu te le bal Newport,
+			On ayu et marie au d'agrement 
+
+			Le bal Newport t'en ayu te,
+			On ça fait encore des bonhomie.
+			J'amerais de a tu les Cajun,
+			Si ti vu un bontemps á festival.
+			`
+	},
+	{
+		key: "",
+		title: "Down In The Willow Garden",
+		writtenBy: "",
+		year: null,
+		lyrics: `
+			Down in the Willow garden
+			Where me and my love did meet
+			As we sat a-courtin'
+			My love fell off to sleep
+			I had a bottle of Burgundy wine
+			My love she did not know
+			So I poisoned that dear little girl
+			On the banks below
+
+			I drew a sabre through her
+			It was a bloody knife
+			I threw her in the river
+			Which was a dreadful sign
+			My father often told me
+			That money would set me free
+			If I would murder that dear little girl
+			Whose name was Rose Connolly
+
+			My father sits at his cabin door
+			Wiping his tear-dimmed eyes
+			For his only son soon shall walk
+			To yonder scaffold high
+			My race is run, beneath the sun
+			The scaffold now waits for me
+			For I did murder that dear little girl
+			Whose name was Rose Connelly
+			`
+	},
+	{
+		key: "",
+		title: "Spanish Mary",
+		writtenBy: "Bob Dylan & Rhiannon Giddens Laffan",
+		year: null,
+		lyrics: `
+			There were three sailors, bold and true
+			With cargo they did carry
+			They sailed away on the ocean blue
+			For the love of Spanish Mary
+
+			So deeply now were they disturbed
+			No longer could they tarry
+			Swoon and swerve
+			For the love of Spanish Mary
+
+			In Kingston Town of high degree
+			The buffoon, the fool, the fairy
+			All paid the dues and inquired to me
+			For the love of Spanish Mary
+
+			Beggar man, beggar man tell me no lie
+			Is it a mystery to live or is it a mystery to die?
+
+			I seek ye not to ask of you
+			It was in Kingston Town indeed
+			It is said they stopped but not for greed
+			But for the love of Spanish Mary
+
+			I remember well, they came one day
+			The buffoon, the fool, the fairy
+			They asked of me what could I say
+			For the love of Spanish Mary
+
+			'Tis not of me to talk absurd
+			No rumour do I carry
+			No, I'll not give you one word
+			But for the love of Spanish Mary
+
+			Beggar man, beggar man tell me no lie
+			Is it a mystery to live or is it a mystery to die?
+			`
+	},
+	{
+		key: "",
+		title: "She's Got You",
+		writtenBy: "Hank Cochran",
+		performedBy: "Patsy Cline",
+		year: null,
+		lyrics: `
+			I've got your picture
+			That you gave to me
+			And it's signed with love
+			Just like it used to be
+
+			The only thing different
+			The only thing new
+			I've got your picture
+			She's got you
+
+			I've got the records
+			That we used to share
+			And they still sound the same
+			As when you were here
+
+			The only thing different
+			The only thing new
+			I've got the records
+			She's got you
+
+			I've got your memory
+			Or, has it got me
+			I really don't know
+			But I know, it won't let me be
+
+			I've got your class ring
+			That proved you cared
+			And it still looks the same
+			As when you gave it, dear
+
+			The only thing different
+			The only thing new
+			I've got these little things
+			She's got you
+
+			I've got your memory
+			Or, has it got me
+			I really don't know
+			But I know, it won't let me be
+			
+			I've got your class ring
+			That proved you cared
+			And it still looks the same
+			As when you gave it, dear
+			
+			The only thing different
+			The only thing new
+			I've got these little things
+			She's got you
+			`
+	},
+	{
+		key: "",
+		title: "A Woman, A Lover, A Friend",
+		writtenBy: "Sid Wyche",
+		year: null,
+		lyrics: `
+			Yeah, I want somebody to hold my hand
+			Somebody to love me and understand
+			I want a woman (woman)
+			I want a lover (a lover)
+			I want a friend (a woman, a lover, a friend)
+
+			Mmm, I want somebody to share my love
+			Yes, loving is something I've got plenty of
+			I want a woman (woman)
+			I want a lover (a lover)
+			I want a friend (a woman, a lover, a friend) ah-ahh
+
+			I don't want a fancy gal
+			With powder and paint
+			And I don't want a woman
+			Who thinks she's a saint
+			I'm looking for someone
+			Who's not make-believe
+			And doesn't mind giving so that she may receive
+
+			There must be somebody somewhere around
+			That's looking for someone to give pound for pound
+			I want me a woman (woman)
+			Mmm, I want a lover (a lover)
+			I want a friend (a woman, a lover, a friend)
+
+			Yeah I want her right now
+			I want my little girl anyway, I want her anyhow
+			Please come on, baby
+			Just be my little woman, be my lover
+			`
+	},
+	{
+		key: "",
+		title: "House of the Rising Sun",
+		writtenBy: "WHITE JOSH / BACON NICHOLAS W / HOLMES LIBBY REYNOLDS",
+		performedBy: "Doc Watson & Richard Watson",
+		year: null,
+		lyrics: `
+			There is a house down in New Orleans
+			They call the Rising Sun
+			And it's been the ruin of a many poor boy
+			And me, oh God, i'm one
+
+			Mamma she worked for a tailor man
+			she sewed all my new blue jeans
+			and my daddy was a gamblin' man
+			in the town of old new orleans
+
+			The only thing that a rounder ever needs
+			Is a suitcase and a trunk
+			And the only time he's ever satisfied
+			Is when he's on a drunk
+
+			Boys fill up your glasses right to the brim
+			Let the drinks flow merrily round
+			And we'll drink to the health of a rounder poor boy
+			Who rambles from town to town
+
+			Now fella's don't believe what a bad woman tells you
+			Though her eyes be blue or brown
+			Unless she's standing on some old scaffold high
+			Saying "fellas" they won't let me come down.
+
+			Go tell my youngest brother
+			Not to do the awful things I've done
+			and to shun that old house down in New Orleans
+			that they call the Rising Sun
+
+			soon they'll take me back down to new orleans
+			to face all the crimes that i've done
+			then they'll tie me to, an old ball and chain
+			until my earlthy race is run
+			`
+	},
+	{
+		key: "",
+		title: "Hop High",
+		writtenBy: "Traditional",
+		year: null,
+		lyrics: `
+			Where did you get them high topped shoes
+			And the dress that you wear so fine
+			Got my shoes from a railroad man
+			And the dress is from a driver in the mine
+
+			Oh hop high, hop high
+			Hop high you Lulu girl
+			
+			Pawn you my watch and I'll pawn you my chain
+			I'll pawn you my gold wedding ring
+			To pay my little Lulu's fine
+			I'll pawn you my wagon and my team
+			
+			Oh hop high, hop high
+			Hop high my Lulu girl
+			
+			Where have you been my pretty little girl
+			Where have you been so long
+			I've been in the pen with them rough and rowdy men
+			And honey I'm goin' back again
+
+			Hop high, hop high
+			Hop high my Lulu girl
+			Hop high, hop high
+			Hop high my Lulu girl
+			Hop high, hop high
+			Hop high, my Lulu girl
+			Hop high, hop high
+			Hop high my Lulu girl
+			`
+	},
+	{
+		key: "",
+		title: "Moonlight In Vermont",
+		writtenBy: "BLACKBURN JOHN M / SUESSDORF KARL",
+		year: null,
+		lyrics: `
+			Pennies in a stream
+			Falling leaves, a sycamore
+			Moonlight in Vermont
+			
+			Icy finger waves
+			Ski trails down a mountainside
+			Snow light in Vermont
+			
+			Telegraph cables how they sing down the highway
+			As they travel each bend in the road
+			People who meet in this romantic setting
+			Are so hypnotized by the lovely
+			
+			Evening summer breeze
+			Warbling of a meadowlark
+			Moonlight in Vermont
+			
+			Telegraph cables how they sing down the highway
+			As they travel each bend in the road
+			People who meet in this romantic setting
+			Are so hypnotized by the lovely
+			
+			Evening summer breeze
+			The sweet warbling of a meadowlark
+			Moonlight in Vermont
+
+			Snow light in Vermont
+			Moonlight in Vermont
+			`
+	},
+	{
+		key: "",
+		title: "Autumn Leaves",
+		writtenBy: "Jacques Prevert / Johnny Mercer / Joseph Kosma",
+		year: null,
+		lyrics: `
+			The falling leaves
+			Drift by my window
+			The autumn leaves
+			Of red and gold
+
+			I see your lips
+			The summer kisses
+			The sunburned hands
+			I used to hold
+			
+			Since you went away
+			The days grow long
+			And soon I'll hear
+			Old winter's song
+			But I miss you most of all
+			My darling
+			When autumn leaves
+			Start to fall
+			`
+	},
+	{
+		key: "",
+		title: "Take Me Back To My Boots And Saddle",
+		writtenBy: "TEDDY POWELL / LEONARD WHITCUP / WALTER G. SAMUELS",
+		year: null,
+		lyrics: `
+			Take me back to my boots and saddle
+			Wooh-ooh-ooh, ooh-ooh-ooh, ooh-ooh-ah-ooh
+			Let me see that gen'ral store
+			Let me ride that range once more
+			Gimme my boots and saddle
+
+			Let me ramble along the prairie
+			Wooh-ooh-ooh, ooh-ooh-ooh, ooh-ooh-ah-ooh
+			Ropin' steers on old Bar-X
+			With my buddies, Slim and Tex
+			Oh, gimme my boots and saddle
+			
+			Got a hankerin' to be with a banjo on my knee
+			Strummin' a pretty western tune
+			There's a gal in Cherokee
+			And she's waitin' there for me
+			Waitin' 'neath a Texas moon
+			
+			Take me back to my boots and saddle
+			Wooh-ooh-ooh, ooh-ooh-ooh, ah-oooh
+			Let me greet each blazin' morn
+			On the ranch where I was born
+			Oh, gimme my boots and saddle
+			
+			Wooh-ooh-ooh, ooh-ooh-ooh, ooh-ooh-ooooooh
+			`
+	},
+	{
+		key: "",
+		title: "Lonely Women Make Good Lovers",
+		writtenBy: "Freddy Weller / Lindon Oldham",
+		year: null,
+		lyrics: `
+			Lonely women make good lovers 
+			They all have mercy for good lookin' smooth talkin' men 
+			Lonely women make good lovers 
+			If you got a woman you better treat her just as good as you can
+
+			Lots of times a lonely girl will go out on the town 
+			With no thoughts of evil on her mind 
+			She don't try to flat that seat 
+			Lord knows there's something every woman needs 
+			Friendly smile will do it, every time
+
+			Lonely women make good lovers 
+			They all have mercy for good lookin' smooth talkin' men 
+			Lonely women make good lovers 
+			If you got a woman you better treat her just as good as you can
+
+			Once a woman's tasted love, she can't do without 
+			She'll search for something more 
+			When she gets cold 
+			And if her lips are wet with wine 
+			When it comes to lovin' time 
+			She'll trade her pride for something 
+			Warm to hold
+
+			Lonely women make good lovers 
+			They all have mercy for good lookin' smooth talkin' men 
+			Lonely women make good lovers 
+			If you got a woman you better treat her just as good as you can
+			`
+	},
+	{
+		key: "",
+		title: "I'll Be There (By Your Side)",
+		writtenBy: "Ray Price & Rusty Gabbard",
+		year: null,
+		lyrics: `
+			There ain't no chains strong enough to hold me 
+			There ain't no breeze big enough to slow me 
+			Never have seen a river that's too wide
+			There ain’t no jail tight enough to lock me
+			There ain’t no man big enough to stop me
+			I’ll be there if you ever want me by your side
+			
+			So love me if you ever gonna love me 
+			I never have seen a road to rough to ride
+			There ain't no chains strong enough to hold me
+			There ain't no breeze big enough to slow me
+			I'll be there if you ever want me by your side
+					
+			There ain't no rope tight enough to bind me
+			Look for me honey you will find me 
+			Any old time your ready with your charm
+			I'll be there ready and a waiting
+			There won't be any hesitation
+			I'll be there if you ever want me in your arms
+			`
+	},
+	{
+		key: "",
+		title: "Paradise",
+		writtenBy: "John Prine",
+		year: null,
+		lyrics: `
+			When I was a child my family would travel
+			Down to Western Kentucky where my parents were born
+			And there's a backwards old town that's often remembered
+			So many times that my memories are worn
+
+			And daddy won't you take me back to Muhlenberg County
+			Down by the Green River where Paradise lay
+			Well, I'm sorry my son, but you're too late in asking
+			Mister Peabody's coal train has hauled it away
+			
+			Well, sometimes we'd travel right down the Green River
+			To the abandoned old prison down by Airdrie Hill
+			Where the air smelled like snakes and we'd shoot with our pistols
+			But empty pop bottles was all we would kill
+			
+			And daddy won't you take me back to Muhlenberg County
+			Down by the Green River where Paradise lay
+			Well, I'm sorry my son, but you're too late in asking
+			Mister Peabody's coal train has hauled it away
+			
+			Then the coal company came with the world's largest shovel
+			And they tortured the timber and stripped all the land
+			Well, they dug for their coal till the land was forsaken
+			Then they wrote it all down as the progress of man
+			
+			And daddy won't you take me back to Muhlenberg County
+			Down by the Green River where Paradise lay
+			Well, I'm sorry my son, but you're too late in asking
+			Mister Peabody's coal train has hauled it away
+			
+			When I die let my ashes float down the Green River
+			Let my soul roll on up to the Rochester dam
+			I'll be halfway to Heaven with Paradise waitin'
+			Just five miles away from wherever I am
+			
+			And daddy won't you take me back to Muhlenberg County
+			Down by the Green River where Paradise lay
+			Well, I'm sorry my son, but you're too late in asking
+			Mister Peabody's coal train has hauled it away
+			`
+	},
+	{
+		key: "",
+		title: "Hello In There",
+		writtenBy: "John Prine",
+		year: null,
+		lyrics: `
+			We had an apartment in the city
+			Me and Loretta liked living there
+			Well, it'd been years since the kids had grown
+			A life of their own left us alone
+			John and Linda live in Omaha
+			And Joe is somewhere on the road
+			We lost Davy in the Korean war
+			And I still don't know what for, don't matter anymore
+
+			Ya' know that old trees just grow stronger
+			And old rivers grow wilder ev'ry day
+			Old people just grow lonesome
+			Waiting for someone to say, "Hello in there, hello"
+
+			Me and Loretta, we don't talk much more
+			She sits and stares through the back door screen
+			And all the news just repeats itself
+			Like some forgotten dream that we've both seen
+			Someday I'll go and call up Rudy
+			We worked together at the factory
+			But what could I say if asks "What's new?"
+			"Nothing, what's with you? Nothing much to do"
+
+			So if you're walking down the street sometime
+			And spot some hollow ancient eyes
+			Please don't just pass 'em by and stare
+			As if you didn't care, say, "Hello in there, hello"
+			`
+	}
 
 ]; 
