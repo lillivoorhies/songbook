@@ -2,4 +2,11 @@
     click arrows for next and previous on the bottoms of the pages for next pages
     fit on a page, etc.
  . option to choose between nashville numbers and chords
- . accept filter from querystring q=
+ . [x] accept filter from querystring q=
+ . page not working on mobile  
+ . https://codepen.io/kchez/pen/YwedPb
+ . checkbox for tag filter
+ . implement bootstrap carousel
+ . buttons for next page
+ . index as mmenu
+ . header, options and filters as collapsible menu at top of page

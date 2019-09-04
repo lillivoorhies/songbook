@@ -1,10 +1,8 @@
 class DynamicTable {
 
-    constructor(itemsName, dataObject, rowRenderFunction, containerId = null) {
+    constructor(configuration) {
 
-        this.containerId = (containerId != null) ? containerId : `${itemsName}Table`;
-
-        if (!this.containerId || !(this.container = document.getElementById(this.containerId)) || !dataObject || !rowRenderFunction) return false;
+        if (!this.loadConfiguration(configuration)) return false;
 
         this.filterLogicEnum = {
             StringContains: 0,
@@ -14,7 +12,8 @@ class DynamicTable {
             Equals: 4,
             LessThan: 5,
             GreaterThan: 6,
-            ArrayIncludes: 7
+            ArrayIncludes: 7,
+            ArrayHasMatch: 8
         };
         this.sortMethodEnum = {
             ALPHABETICAL: 0,
@@ -30,14 +29,10 @@ class DynamicTable {
 
         this.currSortKey = "";
         this.currSortOrder = this.sortOrderEnum.ASC;
-        this.dataObject = dataObject;
-        this.filteredTable = dataObject;
-        this.renderRow = rowRenderFunction;
+        this.filteredTable = this.dataObject;
         this.filterLists = [];
         this.filterANDList = [];
         this.showSummary = true;
-
-        this.itemsName = itemsName;
 
         this.pinningEnabled = false;
         this.pinnedKey = "";
@@ -46,10 +41,29 @@ class DynamicTable {
         this.onUnpinFunction = null;
 
         this.currentPage = 1;
-        this.rowsPerPage = this.dataObject.length;
         this.maxButtons = 15;
 
         this.update();
+    }
+
+    loadConfiguration(configuration) {
+
+        this.containerId = (configuration.containerId != null) ? configuration.containerId : `${configuration.itemsName}Table`;
+
+        if (!this.containerId || !(this.container = document.getElementById(this.containerId)) || !configuration.dataObject || !configuration.rowRenderFunction) return false;
+
+        this.itemsName = configuration.itemsName;
+        this.dataObject = configuration.dataObject;
+        this.renderRow = configuration.rowRenderFunction;
+
+        this.rowsPerPage = configuration.rowsPerPage || this.dataObject.length;
+        if (configuration.onUpdateFunction != null) this.onUpdateFunction = configuration.onUpdateFunction;
+
+        return true;
+    }
+
+    error(message) {
+        console.log(`${this.instanceName}: ${message}`);
     }
 
     getInstanceName() {
@@ -144,9 +158,11 @@ class DynamicTable {
 
 
     filter(filterName, filterQuery = "", filterORList = []) {
+        if (!this.instanceName) this.setInstanceName();
         if (filterName != "") {
             this.currentPage = 1;
-            if (filterQuery !== "" && typeof (filterORList) == "object") {
+            if (filterQuery.length > 0) {
+                if (!typeof (filterORList) == "object" || !(filterORList.length > 0)) { this.error("Filter Or List must be array"); return false; } 
                 if (this.filterANDList[filterName] && this.filterANDList[filterName].query == filterQuery && JSON.stringify(this.filterANDList[filterName].orList) == JSON.stringify(filterORList)) { return false; };
                 this.filterANDList[filterName] = { query: filterQuery, orList: filterORList };
             } else {
@@ -212,6 +228,9 @@ class DynamicTable {
                         case this.filterLogicEnum.ArrayIncludes:
                             return (value.includes(filter.query));
                             break;
+                        case this.filterLogicEnum.ArrayHasMatch:
+                            return (filter.query.some((element) => value.includes(element)));
+                            break;
                   }
                 }
             }, this);
@@ -256,7 +275,7 @@ class DynamicTable {
             }
             this.update();
         }
-        else console.log(`${this.instanceName}: Pinning is not currently enabled.`);
+        else this.error(`Pinning is not currently enabled.`);
     }
 
     unpin(id) {
@@ -270,7 +289,7 @@ class DynamicTable {
             }
             this.update();
         }
-        else console.log(this.instanceName + ": Pinning is not currently enabled.");
+        else this.error(`Pinning is not currently enabled.`);
     }
 
     renderTableInfo(startIndex, endRow, totalRows) {
@@ -419,7 +438,7 @@ class DynamicTable {
     }
 
     update() {
-        this.instanceName = this.getInstanceName();
+        if (!this.instanceName) this.setInstanceName();
         let table = this.dataObject;
 
         if (this.pinningEnabled) {
@@ -459,5 +478,7 @@ class DynamicTable {
                 container.innerHTML = infoHTML;
             }, this);
         }
+
+        if (this.onUpdateFunction != null) this.onUpdateFunction.call(this);
     }
 }
