@@ -4,7 +4,7 @@ let songs =
 		title: "Junk",
 		key: "F#",
 		writtenBy: "The Beatles",
-		performer: "",
+		recordedBy: "",
 		category: null,
 		tags: [],
 		year: null,
