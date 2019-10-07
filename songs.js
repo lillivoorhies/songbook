@@ -475,7 +475,7 @@ let songs =
 		key: "",
 		title: "Once More",
 		writtenBy: "Dusty Owens",
-		performer: "Osborne Brothers",
+		recordedBy: "Osborne Brothers",
 		year: null,
 		lyrics: `
 			Once more to be with you dear
