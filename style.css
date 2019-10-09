@@ -132,10 +132,10 @@ a:hover { text-decoration: none; }
 }
 
 .song .lyrics {
-    font-family: 'Helvetica';
+    font-family: 'Oswald';
     color: #333;
     font-size: 14pt;
-    line-height: 12pt;
+    line-height: 14pt;
 
 }
 
@@ -173,26 +173,6 @@ a:hover { text-decoration: none; }
     #Book {
         margin: 1in 0.5in
     }
-
-    #Header {
-        display: none;
-    }    
-
-    .page {
-        margin: 0;
-        padding: 0;
-        margin-top: 0.5in;
-        height: 100% !important;
-        page-break-after: always;
-    }
-
-    .page .number {
-        position: absolute;
-        top: 0;
-        right: 0;
-    }
-    
-}
 
     #Header {
         display: none;
