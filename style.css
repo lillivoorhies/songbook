@@ -153,8 +153,7 @@ a:hover { text-decoration: none; }
     -webkit-column-break-inside: avoid;
 }
 
-.song .lyrics p {
-    margin-bottom: 20rem;    
+.song .lyrics p {    
     text-indent: -1.6rem;
     padding-left: 1.6rem;
 }
