@@ -96,10 +96,10 @@ a:hover { text-decoration: none; }
     background-color: #999;
     font-family: 'Oswald';
     font-size: 38pt;
-    line-height: 35pt;
+    line-height: 34pt;
     padding: 8px;
     margin-bottom: 0;
-    letter-spacing:  1pt;
+    letter-spacing:  -1pt;
     /* -webkit-text-stroke: 1px black; */
 
 }
@@ -175,26 +175,6 @@ a:hover { text-decoration: none; }
     #Book {
         margin: 1in 0.5in
     }
-
-    #Header {
-        display: none;
-    }    
-
-    .page {
-        margin: 0;
-        padding: 0;
-        margin-top: 0.5in;
-        height: 100% !important;
-        page-break-after: always;
-    }
-
-    .page .number {
-        position: absolute;
-        top: 0;
-        right: 0;
-    }
-    
-}
 
     #Header {
         display: none;
