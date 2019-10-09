@@ -21,4 +21,4 @@ C’est si dur, c’est d’connaître mais t’es pas là.`,
 				name: "",
 				chordBars: ["", ""]
 			}
-		]; 
+		],
