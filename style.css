@@ -126,13 +126,13 @@ a:hover { text-decoration: none; }
 }
 
 .notes {
-    font-family: "oswald, Gentium Book Basic", Georgia, 'Times New Roman', Times, serif;
+    font-family: 'oswald', 'Gentium Book Basic', 'Georgia', 'Times New Roman', Times, serif;
     font-size: 1em;
     margin-bottom: 0.8rem;
 }
 
 .song .lyrics {
-    font-family: "oswald";
+    font-family: 'Helvetica';
     color: #333;
     font-size: 14pt;
     line-height: 12pt;
@@ -173,6 +173,26 @@ a:hover { text-decoration: none; }
     #Book {
         margin: 1in 0.5in
     }
+
+    #Header {
+        display: none;
+    }    
+
+    .page {
+        margin: 0;
+        padding: 0;
+        margin-top: 0.5in;
+        height: 100% !important;
+        page-break-after: always;
+    }
+
+    .page .number {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    
+}
 
     #Header {
         display: none;
