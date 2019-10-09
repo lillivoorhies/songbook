@@ -154,7 +154,7 @@ a:hover { text-decoration: none; }
 }
 
 .song .lyrics p {
-    margin-bottom: 0;    
+    margin-bottom: 20px;    
     text-indent: -1.6rem;
     padding-left: 1.6rem;
 }
@@ -196,4 +196,3 @@ a:hover { text-decoration: none; }
     }
     
 }
-
