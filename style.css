@@ -92,7 +92,7 @@ a:hover { text-decoration: none; }
 .song .title, #Header .title {
     color: #fff;
     background-color: #999;
-    font-family: 'Merriweather';
+    font-family: 'Oswald';
     font-size: 38pt;
     line-height: 28pt;
     padding: 8px;
@@ -132,7 +132,7 @@ a:hover { text-decoration: none; }
 }
 
 .song .lyrics {
-    font-family: "Caveat";
+    font-family: "Roboto";
     color: #333;
     font-size: 14pt;
     line-height: 12pt;
