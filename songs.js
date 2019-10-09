@@ -2,7 +2,7 @@ let songs =
 [
 {
 		key: "",
-		title: "Reve du Soulard / Drunkard's Dream",
+		title: "Rêve du Soulard / Drunkard's Dream",
 		writtenBy: "Cleveland Crochet?",
 		recordedBy:"Cleveland Crochet and the Sugar Bees",
 		year: ,
