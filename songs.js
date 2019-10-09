@@ -23,7 +23,7 @@ C’est si dur, c’est d’connaître mais t’es pas là.`,
 				name: "",
 				chordBars: ["", ""]
 			}
-		],
+		]},
 		
 		{	
 		title: "'Tit Yeux Noirs / Little Dark Eyes	",
@@ -47,5 +47,5 @@ C’est ça qui fait j’ai mon cœur tout cassé `,
 				name: "",
 				chordBars: ["", ""]
 			}
-		],
+		]},
 		
