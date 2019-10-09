@@ -22,3 +22,27 @@ C’est si dur, c’est d’connaître mais t’es pas là.`,
 				chordBars: ["", ""]
 			}
 		],
+		
+		{
+		key: "",
+		title: "'Tit Yeux Noirs / Little Dark Eyes	",
+		writtenBy: "",
+		recordedBy:"",
+		year: ,
+		lyrics: `À ce matin je m’ai trouvé assis dessus mon lit
+J’ai pleuré avec un cœur aussi cassé
+Parce que j’avais rêvé à mes chères 'tits yeux noirs
+Alle a parti, a’ va jamais s’en revenir
+ 
+
+Après-midi j’étais assis  dessus ma galerie
+Après guetté le soleil après se coucher
+Je m'ennuyé et j’endors des mes chères 'tits yeux noirs
+C’est ça qui fait j’ai mon cœur tout cassé `,
+		chordSections: [
+			{
+				name: "",
+				chordBars: ["", ""]
+			}
+		],
+		
