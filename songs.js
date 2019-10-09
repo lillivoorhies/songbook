@@ -2,7 +2,7 @@ let songs =
 [
 {
 		key: "",
-		title: "Rêve du Soulard / Drunkard's Dream",
+		title: "Reve du Soulard / Drunkard's Dream",
 		writtenBy: "",
 		recordedBy:"Cleveland Crochet and the Sugar Bees",
 		year: ,
@@ -21,6 +21,4 @@ C’est si dur, c’est d’connaître mais t’es pas là.`,
 				name: "",
 				chordBars: ["", ""]
 			}
-		]
-	},
-	]; 
+		]; 
