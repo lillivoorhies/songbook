@@ -3,7 +3,7 @@ let songs =
 {
 		key: "",
 		title: "Reve du Soulard / Drunkard's Dream",
-		writtenBy: "",
+		writtenBy: "Cleveland Crochet?",
 		recordedBy:"Cleveland Crochet and the Sugar Bees",
 		year: ,
 		lyrics: `J’ai arrivé hier au soir (z)à La maison,
@@ -26,7 +26,7 @@ C’est si dur, c’est d’connaître mais t’es pas là.`,
 		{
 		key: "",
 		title: "'Tit Yeux Noirs / Little Dark Eyes	",
-		writtenBy: "",
+		writtenBy: "ANON?",
 		recordedBy:"",
 		year: ,
 		lyrics: `À ce matin je m’ai trouvé assis dessus mon lit
