@@ -148,7 +148,7 @@ a:hover { text-decoration: none; }
 .song .lyrics .stanza {
     /* text-align: justify;
     text-align-last: justify; */
-    margin-bottom: 0.8rem;
+    margin-bottom: 1.6rem;
     -webkit-column-break-inside: avoid;
 }
 
