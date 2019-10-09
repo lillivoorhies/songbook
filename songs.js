@@ -1,11 +1,13 @@
 let songs = 
 [
 {
+		
+		title: "Reve du Soulard / Drunkard's Dream",
 		key: "",
-		title: "Rêve du Soulard / Drunkard's Dream",
 		writtenBy: "Cleveland Crochet?",
 		recordedBy:"Cleveland Crochet and the Sugar Bees",
-		year: ,
+		year: '',
+		category: null,
 		lyrics: `J’ai arrivé hier au soir (z)à La maison,
 J’ai cogné, j’ai crié, j’ai pas de réponse.
 J’ai connu (z)au moment que t’étais pas là,
@@ -23,12 +25,13 @@ C’est si dur, c’est d’connaître mais t’es pas là.`,
 			}
 		],
 		
-		{
-		key: "",
+		{	
 		title: "'Tit Yeux Noirs / Little Dark Eyes	",
+		key: "",
 		writtenBy: "ANON?",
 		recordedBy:"",
-		year: ,
+		year: '',
+		category: null,
 		lyrics: `À ce matin je m’ai trouvé assis dessus mon lit
 J’ai pleuré avec un cœur aussi cassé
 Parce que j’avais rêvé à mes chères 'tits yeux noirs
