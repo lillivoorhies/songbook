@@ -56,6 +56,8 @@ a:hover { text-decoration: none; }
 
 #Index .title p:first-of-type {
     text-indent: -0.8rem;
+    font-family: 'Oswald';
+    font-size: 14 pt;
 }
 
 .song, .page  {
@@ -97,7 +99,7 @@ a:hover { text-decoration: none; }
     line-height: 28pt;
     padding: 8px;
     margin-bottom: 0;
-    letter-spacing: -1pt;
+    letter-spacing:  1pt;
     /* -webkit-text-stroke: 1px black; */
 
 }
@@ -134,8 +136,8 @@ a:hover { text-decoration: none; }
 .song .lyrics {
     font-family: 'Oswald';
     color: #333;
-    font-size: 14pt;
-    line-height: 14pt;
+    font-size: 15pt;
+    line-height: 16pt;
 
 }
 
