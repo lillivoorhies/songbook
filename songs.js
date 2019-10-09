@@ -47,5 +47,5 @@ C’est ça qui fait j’ai mon cœur tout cassé `,
 				name: "",
 				chordBars: ["", ""]
 			}
-		]},
+		]}],
 		
