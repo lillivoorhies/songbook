@@ -146,8 +146,8 @@ a:hover { text-decoration: none; }
 }
 
 .song .lyrics .stanza {
-    text-align: justify;
-    text-align-last: justify; 
+   /* text-align: justify;
+    text-align-last: justify; */
     margin-bottom: 0.8rem;
     -webkit-column-break-inside: avoid;
 }
